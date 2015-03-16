@@ -1,0 +1,15 @@
+{
+  "name": "orchids",
+  "version": "0.0.1",
+  "dependencies": {
+    "marking-surface": "0.6.4",
+    "zooniverse-readymade": "zooniverse/zooniverse-readymade#a11y"
+  },
+  "scripts": {
+    "start": "zooniverse-readymade serve --port 3050 --project ./project.coffee --css ./project.styl --js ./overrides.coffee",
+    "build": "zooniverse-readymade build --output ./build --project ./project.coffee --css ./project.styl --js ./overrides.coffee",
+    "stage": "npm run build && publisssh ./build zooniverse-static/preview.zooniverse.org/orchids && rm -rf ./build",
+    "beta": "npm run build && publisssh ./build zooniverse-static/www.orchidobservers.org/beta && rm -rf ./build",
+    "deploy": "npm run build && publisssh ./build zooniverse-static/www.orchidobservers.org && rm -rf ./build"
+  }
+}
