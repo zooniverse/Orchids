@@ -6,6 +6,7 @@ class FreeDrawTool extends Tool
   stroke: "currentColor"
   strokeWidth: 1
   fill: "transparent"
+  moving: false
 
   constructor: ->
     super
@@ -21,11 +22,16 @@ class FreeDrawTool extends Tool
     @mark.relPath.push [0,0]
 
   onInitialMove: (e) ->
-    super
-    {x, y} = @coords e
-    @mark.relPath.push [@xDiff(x), @yDiff(y)]
-    @mark.set {startingPoint: @mark.startingPoint, relPath: @mark.relPath}
-    @render()
+    unless @moving
+      @moving = true
+      setTimeout =>
+        super
+        {x, y} = @coords e
+        @mark.relPath.push [@xDiff(x), @yDiff(y)]
+        @mark.set {startingPoint: @mark.startingPoint, relPath: @mark.relPath}
+        @render()
+        @moving = false
+      , 150
 
   onInitialRelease: (e) ->
     super
