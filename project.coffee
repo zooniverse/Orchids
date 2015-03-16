@@ -6,7 +6,7 @@ module.exports =
   background: 'background.jpg'
   subjectGroup: false
 
-  title: 'Orchid Observers'
+  title: '<img src="logo.png" alt="Orchid Observers" width=200>'
   summary: 'hello world'
   description: '''
                  '''
