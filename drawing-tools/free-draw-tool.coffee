@@ -51,7 +51,7 @@ class FreeDrawTool extends Tool
     super
     if @mark.relPath.length > 1
       @path.attr {d: @pathDescription()}
-      @controls?.moveTo {x: @maxX(), y: @maxY()}
+      @controls?.moveTo {x: @mark.startingPoint[0], y: @mark.startingPoint[1]}
 
   pathDescription: ->
     "m #{@mark.startingPoint}, #{@mark.relPath.join(',')}"
