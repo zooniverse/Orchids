@@ -12,7 +12,16 @@ module.exports =
                  '''
   
 
-  pages: []
+  pages: [{
+      'Upload': 'This will be the iRecord form.'
+    },{
+    'About': [
+      {
+        'Orchid Observers': 'About the project.'
+      },{
+        'The Team': 'About the people.'
+      }]
+  }]
   
   externalLinks: {}
 
