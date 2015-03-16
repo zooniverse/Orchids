@@ -1,10 +1,13 @@
+Rectangle = require './drawing-tools/rectangle'
+Pinpoint = require './drawing-tools/pinpoint'
+
 module.exports =
   id: 'orchids'
   background: 'background.jpg'
-  subjectGroup: true
+  subjectGroup: false
 
   title: 'Orchid Observers'
-  summary: ''
+  summary: 'hello world'
   description: '''
                  '''
   
@@ -13,11 +16,26 @@ module.exports =
   
   externalLinks: {}
 
-  tasks: {}
+  tasks:
+    marking:
+      type: 'drawing'
+      question: 'Example marking task'
+      choices: [{
+        type: Rectangle
+        label: 'one'
+        value: 'one'
+        color: '#006666'
+        checked: true
+      },{
+        type: Rectangle
+        label: 'two'
+        value: 'two'
+        color: '#666666'
+      }]
 
-  firstTask: {}
+  firstTask: 'marking'
   
-  examples: {}
+  examples: []
 
-  tutorialSteps: {}
+  tutorialSteps: []
 
