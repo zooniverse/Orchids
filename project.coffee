@@ -35,7 +35,7 @@ module.exports =
 
   firstTask: 'marking'
   
-  examples: []
+  examples: require './content/examples'
 
-  tutorialSteps: []
+  tutorialSteps: require './content/tutorial-steps'
 
