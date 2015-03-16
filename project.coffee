@@ -1,5 +1,6 @@
 Rectangle = require './drawing-tools/rectangle'
 Pinpoint = require './drawing-tools/pinpoint'
+FreeDraw = require './drawing-tools/free-draw-tool'
 
 module.exports =
   id: 'orchids'
@@ -31,15 +32,20 @@ module.exports =
       question: 'Example marking task'
       choices: [{
         type: Rectangle
-        label: 'one'
-        value: 'one'
+        label: 'rectangle'
+        value: 'rectangle'
         color: '#006666'
         checked: true
       },{
-        type: Rectangle
-        label: 'two'
-        value: 'two'
+        type: Pinpoint
+        label: 'point'
+        value: 'point'
         color: '#666666'
+      },{
+        type: FreeDraw
+        label: 'line'
+        value: 'line'
+        color: 'yellow'
       }]
 
   firstTask: 'marking'
