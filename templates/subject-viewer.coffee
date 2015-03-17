@@ -2,42 +2,55 @@ translate = require 'zooniverse/lib/translate'
 
 module.exports = -> """
   <div class="drawing-controls">
-    <label class="readymade-has-clickable">
+    
+    <button id="zoom-in" title="Zoom in">
+      <span class="readymade-clickable small">
+        <i class="fa fa-search-plus"></i>
+        <span>Zoom in</span>
+      </span>
+    </button>
+    
+    <button id="zoom-out" title="Zoom out">
+      <span class="readymade-clickable small">
+        <i class="fa fa-search-minus"></i>
+        <span>Zoom out</span>
+      </span>
+    </button>
+    
+    <label class="readymade-has-clickable" title="Help">
+      <input type="checkbox" name="help" />
+      <span class="readymade-clickable small">
+        <i class="fa fa-question readymade-clickable-not-checked"></i>
+        <i class="fa fa-question readymade-clickable-checked" style="color: gold;"></i>
+        <span>Help</span>
+      </span>
+    </label>
+    
+    <label class="readymade-has-clickable" title="Favourite">
       <input type="checkbox" name="favorite" />
-      <span class="readymade-clickable">
+      <span class="readymade-clickable small">
         #{translate 'readymade.favoriteIcon'}
         #{translate 'readymade.favoriteIconChecked'}
         <span>#{translate 'readymade.favorite'}</span>
       </span>
     </label>
 
-    <label class="readymade-has-clickable">
+    <label class="readymade-has-clickable" title="Hide old marks">
       <input type="checkbox" name="hide-old-marks" />
-      <span class="readymade-clickable">
+      <span class="readymade-clickable small">
         #{translate 'readymade.hideOldMarksIcon'}
         #{translate 'readymade.hideOldMarksIconChecked'}
         <span>#{translate 'readymade.hideOldMarks'}</span>
       </span>
     </label>
 
-    <button name="restart-tutorial">
-      <span class="readymade-clickable">
+    <button name="restart-tutorial" title="Restart tutorial">
+      <span class="readymade-clickable small">
         #{translate 'readymade.tutorialIcon'}
         <span>#{translate 'readymade.restartTutorial'}</span>
       </span>
     </button>
     
-    <button id="zoom-in" class="readymade-clickable">
-        <i class="fa fa-search-plus"></i>
-        <span>Zoom in</span>
-      </span>
-    </button>
-    
-    <button id="zoom-out" class="readymade-clickable">
-        <i class="fa fa-search-minus"></i>
-        <span>Zoom out</span>
-      </span>
-    </button>
   </div>
 
   <div class="readymade-marking-surface-container"></div>

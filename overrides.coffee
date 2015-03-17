@@ -100,3 +100,8 @@ zoom_in.addEventListener 'keyup', onStopZoom
 zoom_out.addEventListener 'keydown', onKeyZoomOut
 zoom_out.addEventListener 'keyup', onStopZoom
 
+help = document.querySelector('input[name=help]')
+classify_page.fieldGuideContainer.attr 'aria-hidden', !help.checked
+
+help.addEventListener 'change', (e) ->
+  classify_page.fieldGuideContainer.attr 'aria-hidden', !@.checked
