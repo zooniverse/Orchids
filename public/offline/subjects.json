@@ -2,25 +2,25 @@
   "id": "ORC001",
   "zooniverse_id": "APK0000001",
   "location": {"standard": "offline/BM001160490.jpg"},
-  "metadata": {}
+  "metadata": {"specimen_id": "BM001160490", "species": "Coeloglossum viride (L.) Hartm.", "date": "06/1881", "county": "North Somerset", "locality": ""}
 },{
   "id": "ORC002",
   "zooniverse_id": "APK0000002",
   "location": {"standard": "offline/BM001116671.jpg"},
-  "metadata": {}
+  "metadata": {"specimen_id": "BM001116671", "species": "", "date": "", "county": "", "locality": ""}
 },{
   "id": "ORC003",
   "zooniverse_id": "APK0000003",
   "location": {"standard": "offline/BM001080593.jpg"},
-  "metadata": {}
+  "metadata": {"specimen_id": "BM001080593", "species": "Herminium monorchis (L.) R.Br.", "date": "08/07/1845", "county": "West Kent", "locality": "Halstead; Kent"}
 },{
   "id": "ORC004",
   "zooniverse_id": "APK0000004",
   "location": {"standard": "offline/BM001075195.jpg"},
-  "metadata": {}
+  "metadata": {"specimen_id": "BM001075195", "species": "Cephalanthera damasonium (Mill.) Druce", "date": "", "county": "Berkshire", "locality": "Berkshire"}
 },{
   "id": "ORC005",
   "zooniverse_id": "APK0000005",
   "location": {"standard": "offline/BM000954651.jpg"},
-  "metadata": {}
+  "metadata": {"specimen_id": "BM000954651", "species": "", "date": "", "county": "", "locality": ""}
 }]

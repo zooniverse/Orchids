@@ -1,6 +1,8 @@
 DecisionTree = require 'zooniverse-decision-tree'
 
 class TextTask extends DecisionTree.Task
+  @type: 'text'
+  
   choiceTemplate: (choice, i) -> "
   <label class=''>
 
@@ -12,6 +14,7 @@ class TextTask extends DecisionTree.Task
         name='#{choice.key}'
         value='#{choice.value}'
         data-choice-index='#{i}'
+        #{"disabled" if choice.disabled}
       />
   </label>
   "
@@ -32,5 +35,7 @@ class TextTask extends DecisionTree.Task
       input.value = values[name]
     
     
-  
+DecisionTree.registerTask TextTask
+
+DecisionTree.TextTask = TextTask
 module.exports = TextTask

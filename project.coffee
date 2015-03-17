@@ -1,6 +1,7 @@
 Rectangle = require './drawing-tools/rectangle'
 Pinpoint = require './drawing-tools/pinpoint'
 FreeDraw = require './drawing-tools/free-draw-tool'
+TextTask = require './tasks/text'
 
 module.exports =
   id: 'orchids'
@@ -27,6 +28,27 @@ module.exports =
   externalLinks: {}
 
   tasks:
+    verify:
+      type: 'text'
+      question: 'Verify the specimen label'
+      choices: [{
+        label: 'Specimen ID'
+        key: 'specimen_id'
+        value: ''
+        disabled: true
+      },{
+        label: 'Species'
+        key: 'species'
+        value: ''
+      },{
+        label: 'Date'
+        key: 'date'
+        value: ''
+      },{
+        label: 'Locality'
+        key: 'locality'
+        value: ''
+      }]
     marking:
       type: 'drawing'
       question: 'Example marking task'
@@ -48,7 +70,7 @@ module.exports =
         color: 'yellow'
       }]
 
-  firstTask: 'marking'
+  firstTask: 'verify'
   
   examples: require './content/examples'
 

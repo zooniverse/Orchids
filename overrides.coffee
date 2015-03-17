@@ -43,6 +43,13 @@ ms.on 'marking-surface:add-tool', (tool) ->
 classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
   ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
 
+classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
+  {metadata} = subjectViewer.subject
+  task.reset if task.key is 'verify'
+    specimen_id: metadata.specimen_id
+    species: metadata.species
+    date: metadata.date
+    locality: metadata.locality
 
 zoom_timeout = null
 
