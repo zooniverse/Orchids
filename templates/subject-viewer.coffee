@@ -35,15 +35,6 @@ module.exports = -> """
       </span>
     </label>
 
-    <label class="readymade-has-clickable" title="Hide old marks">
-      <input type="checkbox" name="hide-old-marks" />
-      <span class="readymade-clickable small">
-        #{translate 'readymade.hideOldMarksIcon'}
-        #{translate 'readymade.hideOldMarksIconChecked'}
-        <span>#{translate 'readymade.hideOldMarks'}</span>
-      </span>
-    </label>
-
     <button name="restart-tutorial" title="Restart tutorial">
       <span class="readymade-clickable small">
         #{translate 'readymade.tutorialIcon'}
