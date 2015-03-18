@@ -50,6 +50,7 @@ classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
     species: metadata.species
     date: metadata.date
     locality: metadata.locality
+    vc: metadata.vc
 
 zoom_timeout = null
 

@@ -48,6 +48,11 @@ module.exports =
         label: 'Locality'
         key: 'locality'
         value: ''
+      },{
+        label: 'Vice-county'
+        key: 'vc'
+        value: ''
+        type: 'number'
       }]
     marking:
       type: 'drawing'

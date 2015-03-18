@@ -10,7 +10,7 @@ class TextTask extends DecisionTree.Task
 
       <span class='readymade-choice-label'>#{choice.label ? choice.value ? i}</span>
       
-      <input type='text'
+      <input type= #{choice.type ? 'text'}
         name='#{choice.key}'
         value='#{choice.value}'
         data-choice-index='#{i}'
