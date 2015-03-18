@@ -40,6 +40,7 @@ module.exports =
         label: 'Species'
         key: 'species'
         value: ''
+        disabled: true
       },{
         label: 'Date'
         key: 'date'
