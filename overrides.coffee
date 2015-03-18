@@ -3,6 +3,10 @@ MAX_PAGE_WIDTH = 600
 require './readymade/overrides.coffee'
 SubjectMetadata = require './subject-metadata'
 SubjectViewer = require 'zooniverse-readymade/lib/subject-viewer'
+ClassifyPage = require 'zooniverse-readymade/lib/classify-page'
+  
+ClassifyPage::showPageHelp = () ->
+  @fieldGuideContainer.attr 'aria-hidden', !@help.checked
 
 SubjectViewer::template = require './templates/subject-viewer'
 
@@ -32,6 +36,7 @@ SubjectViewer::zoom = (scale = 1) ->
 
 currentProject = require 'zooniverse-readymade/current-project'
 herbarium_page = currentProject.classifyPages[0]
+field_page = currentProject.classifyPages[1]
 
 {decisionTree, subjectViewer} = herbarium_page
   
@@ -102,9 +107,13 @@ zoom_in.addEventListener 'keydown', onKeyZoomIn
 zoom_in.addEventListener 'keyup', onStopZoom
 zoom_out.addEventListener 'keydown', onKeyZoomOut
 zoom_out.addEventListener 'keyup', onStopZoom
+  
+for page in [herbarium_page, field_page]
+  page.help = page.el[0].querySelector('input[name=help]')
+  page.fieldGuideContainer.attr 'aria-hidden', !page.help.checked
+    
+  do (page)->
+    page.help.addEventListener 'change', (e)->
+      page.showPageHelp()
 
-help = document.querySelector('input[name=help]')
-herbarium_page.fieldGuideContainer.attr 'aria-hidden', !help.checked
 
-help.addEventListener 'change', (e) ->
-  herbarium_page.fieldGuideContainer.attr 'aria-hidden', !@.checked
