@@ -31,23 +31,23 @@ SubjectViewer::zoom = (scale = 1) ->
   @markingSurface.rescale()
 
 currentProject = require 'zooniverse-readymade/current-project'
-classify_page = currentProject.classifyPages[0]
+herbarium_page = currentProject.classifyPages[0]
 
-{decisionTree, subjectViewer} = classify_page
+{decisionTree, subjectViewer} = herbarium_page
   
 ms = subjectViewer.markingSurface
 
 subject_metadata = new SubjectMetadata
-classify_page.el.find('.decision-tree').prepend subject_metadata.el
+herbarium_page.el.find('.decision-tree').prepend subject_metadata.el
 
 # set the image scale if not already set  
 ms.on 'marking-surface:add-tool', (tool) ->
   @rescale() if @scaleX is 0
   
-classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
+herbarium_page.on herbarium_page.LOAD_SUBJECT, (e, subject)->
   ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
 
-classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
+herbarium_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   {metadata} = subjectViewer.subject
   task.reset if task.key is 'verify'
     date: metadata.date
@@ -104,7 +104,7 @@ zoom_out.addEventListener 'keydown', onKeyZoomOut
 zoom_out.addEventListener 'keyup', onStopZoom
 
 help = document.querySelector('input[name=help]')
-classify_page.fieldGuideContainer.attr 'aria-hidden', !help.checked
+herbarium_page.fieldGuideContainer.attr 'aria-hidden', !help.checked
 
 help.addEventListener 'change', (e) ->
-  classify_page.fieldGuideContainer.attr 'aria-hidden', !@.checked
+  herbarium_page.fieldGuideContainer.attr 'aria-hidden', !@.checked
