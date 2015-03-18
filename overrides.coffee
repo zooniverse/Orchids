@@ -1,6 +1,7 @@
 MAX_PAGE_WIDTH = 600
 
 require './readymade/overrides.coffee'
+SubjectMetadata = require './subject-metadata'
 SubjectViewer = require 'zooniverse-readymade/lib/subject-viewer'
 
 SubjectViewer::template = require './templates/subject-viewer'
@@ -36,6 +37,9 @@ classify_page = currentProject.classifyPages[0]
   
 ms = subjectViewer.markingSurface
 
+subject_metadata = new SubjectMetadata
+classify_page.el.find('.decision-tree').prepend subject_metadata.el
+
 # set the image scale if not already set  
 ms.on 'marking-surface:add-tool', (tool) ->
   @rescale() if @scaleX is 0
@@ -46,8 +50,6 @@ classify_page.on classify_page.LOAD_SUBJECT, (e, subject)->
 classify_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
   {metadata} = subjectViewer.subject
   task.reset if task.key is 'verify'
-    specimen_id: metadata.specimen_id
-    species: metadata.species
     date: metadata.date
     locality: metadata.locality
     vc: metadata.vc
