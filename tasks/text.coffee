@@ -21,7 +21,7 @@ class TextTask extends DecisionTree.Task
   
   getValue: ->
     output = {}
-    inputs = @el.querySelectorAll "input[type=text]"
+    inputs = @el.querySelectorAll "input[type]"
     output[input.name] = input.value for input in inputs
     
     output
