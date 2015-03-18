@@ -56,6 +56,21 @@ module.exports =
         value: ''
         type: 'number'
       }]
+      next: 'flowering'
+    flowering:
+      type: 'radio'
+      question: 'Identify the flowering stage of this specimen.'
+      confirmButtonLabel: 'Finish'
+      choices: [{
+        label: 'one'
+        value: 'one'
+      },{
+        label: 'two'
+        value: 'two'
+      },{
+        label: 'three'
+        value: 'three'
+      }]
 
   firstTask: 'marking'
   
