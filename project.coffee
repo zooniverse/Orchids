@@ -61,6 +61,7 @@ module.exports =
           key: 'vc'
           value: ''
           type: 'number'
+          length: 3
         }]
         next: 'flowering'
       flowering:

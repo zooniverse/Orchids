@@ -14,7 +14,8 @@ class TextTask extends DecisionTree.Task
         name='#{choice.key}'
         value='#{choice.value}'
         data-choice-index='#{i}'
-        #{"disabled" if choice.disabled}
+        #{choice.length && "size=" + choice.length}
+        #{choice.disabled && "disabled"}
       />
   </label>
   "
