@@ -70,55 +70,6 @@ subject_metadata = new SubjectMetadata
 herbarium_page.el.find('.decision-tree').prepend subject_metadata.el
     
 # herbarium_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task, index}})->
-
-zoom_timeout = null
-
-onZoomIn = (e)->
-  e.preventDefault()
-  onZoom e.currentTarget, .1
-  
-onZoomOut = (e)->
-  e.preventDefault()
-  onZoom e.currentTarget, -.1
-  
-onKeyZoomIn = (e)->
-  return unless e.which == 13
-  onZoom e.currentTarget, .1
-
-onKeyZoomOut = (e)->
-  return unless e.which == 13
-  onZoom e.currentTarget, -.1
-
-onStopZoom = (e)->
-  e.stopPropagation()
-  onZoom e.currentTarget, 0
-  
-onZoom = (currentTarget, delta)->
-  clearTimeout zoom_timeout if zoom_timeout?
-
-  zoom = ->
-    return if delta == 0
-    herbarium_page.subjectViewer.zoom herbarium_page.subjectViewer.scale + delta
-    clearTimeout zoom_timeout if zoom_timeout?
-    zoom_timeout = setTimeout zoom, 200
-    
-  zoom()
-
-zoom_in = document.getElementById 'zoom-in'
-zoom_out = document.getElementById 'zoom-out'
-
-zoom_in.addEventListener 'mousedown', onZoomIn
-zoom_in.addEventListener 'mouseup', onStopZoom
-zoom_out.addEventListener 'mousedown', onZoomOut
-zoom_out.addEventListener 'mouseup', onStopZoom
-zoom_in.addEventListener 'touchstart', onZoomIn
-zoom_in.addEventListener 'touchend', onStopZoom
-zoom_out.addEventListener 'touchstart', onZoomOut
-zoom_out.addEventListener 'touchend', onStopZoom
-zoom_in.addEventListener 'keydown', onKeyZoomIn
-zoom_in.addEventListener 'keyup', onStopZoom
-zoom_out.addEventListener 'keydown', onKeyZoomOut
-zoom_out.addEventListener 'keyup', onStopZoom
   
 for page in [herbarium_page, field_page]
   page.help = page.el[0].querySelector('input[name=help]')
@@ -127,5 +78,54 @@ for page in [herbarium_page, field_page]
   do (page)->
     page.help.addEventListener 'change', (e)->
       page.showPageHelp()
+    
+    zoom_timeout = null
+
+    onZoomIn = (e)->
+      e.preventDefault()
+      onZoom e.currentTarget, .1
+  
+    onZoomOut = (e)->
+      e.preventDefault()
+      onZoom e.currentTarget, -.1
+  
+    onKeyZoomIn = (e)->
+      return unless e.which == 13
+      onZoom e.currentTarget, .1
+
+    onKeyZoomOut = (e)->
+      return unless e.which == 13
+      onZoom e.currentTarget, -.1
+
+    onStopZoom = (e)->
+      e.stopPropagation()
+      onZoom e.currentTarget, 0
+  
+    onZoom = (currentTarget, delta)->
+      clearTimeout zoom_timeout if zoom_timeout?
+
+      zoom = ->
+        return if delta == 0
+        page.subjectViewer.zoom page.subjectViewer.scale + delta
+        clearTimeout zoom_timeout if zoom_timeout?
+        zoom_timeout = setTimeout zoom, 200
+    
+      zoom()
+    
+    zoom_in = page.el[0].querySelector '[name=zoom-in]'
+    zoom_out = page.el[0].querySelector '[name=zoom-out]'
+
+    zoom_in.addEventListener 'mousedown', onZoomIn
+    zoom_in.addEventListener 'mouseup', onStopZoom
+    zoom_out.addEventListener 'mousedown', onZoomOut
+    zoom_out.addEventListener 'mouseup', onStopZoom
+    zoom_in.addEventListener 'touchstart', onZoomIn
+    zoom_in.addEventListener 'touchend', onStopZoom
+    zoom_out.addEventListener 'touchstart', onZoomOut
+    zoom_out.addEventListener 'touchend', onStopZoom
+    zoom_in.addEventListener 'keydown', onKeyZoomIn
+    zoom_in.addEventListener 'keyup', onStopZoom
+    zoom_out.addEventListener 'keydown', onKeyZoomOut
+    zoom_out.addEventListener 'keyup', onStopZoom
 
 

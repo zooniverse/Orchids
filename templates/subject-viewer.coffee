@@ -3,14 +3,14 @@ translate = require 'zooniverse/lib/translate'
 module.exports = -> """
   <div class="drawing-controls">
     
-    <button id="zoom-in" title="Zoom in">
+    <button name="zoom-in" title="Zoom in">
       <span class="readymade-clickable small">
         <i class="fa fa-search-plus"></i>
         <span>Zoom in</span>
       </span>
     </button>
     
-    <button id="zoom-out" title="Zoom out">
+    <button name="zoom-out" title="Zoom out">
       <span class="readymade-clickable small">
         <i class="fa fa-search-minus"></i>
         <span>Zoom out</span>
