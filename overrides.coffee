@@ -40,30 +40,34 @@ field_page = currentProject.classifyPages[1]
 
 for page in currentProject.classifyPages
   do (page) ->
-    page.ms = page.subjectViewer.markingSurface
+    {decisionTree, subjectViewer} = page
+    ms = subjectViewer.markingSurface
+    
+    page.Subject.trackSeenSubject = (subject) ->
+
     # set the image scale if not already set  
-    page.ms.on 'marking-surface:add-tool', (tool) ->
+    ms.on 'marking-surface:add-tool', (tool) ->
       @rescale() if @scaleX is 0
+    
+    page.on page.LOAD_SUBJECT, (e, subject)->
+      ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
+    
+    page.Subject.on 'select', (e, subject)->
+      {metadata} = subject
+      
+      if page.workflow is 'herbarium'
+        page.decisionTree.tasks.verify.setDefaults
+          date: metadata.date
+          locality: metadata.locality
+          vc: metadata.vc
+      
+      if page.workflow is 'field'
+        page.decisionTree.tasks.species.setDefaults
+          species: metadata.species
+      
 
 subject_metadata = new SubjectMetadata
 herbarium_page.el.find('.decision-tree').prepend subject_metadata.el
-
-  
-herbarium_page.on herbarium_page.LOAD_SUBJECT, (e, subject)->
-  {ms, subjectViewer, decisionTree} = herbarium_page
-  ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
-  {metadata} = subject
-  decisionTree.tasks.verify.setDefaults
-    date: metadata.date
-    locality: metadata.locality
-    vc: metadata.vc
-
-field_page.on field_page.LOAD_SUBJECT, (e, subject)->
-  {ms, subjectViewer, decisionTree} = field_page
-  ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
-  {metadata} = subject
-  decisionTree.tasks.species.setDefaults
-    species: metadata.species
     
 # herbarium_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task, index}})->
 
@@ -94,7 +98,7 @@ onZoom = (currentTarget, delta)->
 
   zoom = ->
     return if delta == 0
-    subjectViewer.zoom subjectViewer.scale + delta
+    herbarium_page.subjectViewer.zoom herbarium_page.subjectViewer.scale + delta
     clearTimeout zoom_timeout if zoom_timeout?
     zoom_timeout = setTimeout zoom, 200
     

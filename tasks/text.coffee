@@ -36,7 +36,7 @@ class TextTask extends DecisionTree.Task
     
     for name of values
       input = @el.querySelector "input[name=#{name}]"
-      input.value = values[name]
+      input.value = values[name] if input
   
   setDefaults: (values) ->
     @defaults[name] = values[name] for name of values
