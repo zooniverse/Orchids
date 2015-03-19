@@ -50,6 +50,7 @@ module.exports =
       verify:
         type: 'text'
         question: 'Verify the specimen label'
+        defaults: {}
         choices: [{
           label: 'Date'
           key: 'date'
@@ -91,6 +92,7 @@ module.exports =
       species:
         type: 'text'
         question: 'Verify the species'
+        defaults: {}
         choices: [{
           label: 'Species'
           key: 'species'
