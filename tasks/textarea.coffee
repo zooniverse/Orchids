@@ -1,6 +1,8 @@
 DecisionTree = require 'zooniverse-decision-tree'
 
 class TextareaTask extends DecisionTree.Task
+  @type: 'textarea'
+  
   choiceTemplate: (choice, i) -> "
   <label class=''>
 
@@ -35,5 +37,7 @@ class TextareaTask extends DecisionTree.Task
       input.value = values[name]
     
     
-  
+DecisionTree.registerTask TextareaTask
+
+DecisionTree.TextTask = TextareaTask  
 module.exports = TextareaTask
