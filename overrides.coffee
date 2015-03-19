@@ -38,26 +38,34 @@ currentProject = require 'zooniverse-readymade/current-project'
 herbarium_page = currentProject.classifyPages[0]
 field_page = currentProject.classifyPages[1]
 
-{decisionTree, subjectViewer} = herbarium_page
-  
-ms = subjectViewer.markingSurface
+for page in currentProject.classifyPages
+  do (page) ->
+    page.ms = page.subjectViewer.markingSurface
+    # set the image scale if not already set  
+    page.ms.on 'marking-surface:add-tool', (tool) ->
+      @rescale() if @scaleX is 0
 
 subject_metadata = new SubjectMetadata
 herbarium_page.el.find('.decision-tree').prepend subject_metadata.el
 
-# set the image scale if not already set  
-ms.on 'marking-surface:add-tool', (tool) ->
-  @rescale() if @scaleX is 0
   
 herbarium_page.on herbarium_page.LOAD_SUBJECT, (e, subject)->
+  {ms, subjectViewer, decisionTree} = herbarium_page
   ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
-
-herbarium_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
-  {metadata} = subjectViewer.subject
-  task.reset if task.key is 'verify'
+  {metadata} = subject
+  decisionTree.tasks.verify.setDefaults
     date: metadata.date
     locality: metadata.locality
     vc: metadata.vc
+
+field_page.on field_page.LOAD_SUBJECT, (e, subject)->
+  {ms, subjectViewer, decisionTree} = field_page
+  ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
+  {metadata} = subject
+  decisionTree.tasks.species.setDefaults
+    species: metadata.species
+    
+# herbarium_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task, index}})->
 
 zoom_timeout = null
 
