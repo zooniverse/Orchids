@@ -31,6 +31,7 @@ module.exports =
   workflows: [{
     key: 'herbarium'
     label: 'Herbarium'
+    subjectGroup: 'herbarium'
     firstTask: 'marking'
     examples: require './content/examples'
     tutorialSteps: require './content/tutorial-steps'
@@ -81,6 +82,7 @@ module.exports =
         }]
   },{
     key: 'field'
+    subjectGroup: 'field'
     label: 'Field photos'
     firstTask: 'species'
     examples: require './content/examples'
