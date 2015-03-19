@@ -3,6 +3,8 @@ DecisionTree = require 'zooniverse-decision-tree'
 class TextTask extends DecisionTree.Task
   @type: 'text'
   
+  defaults: {}
+  
   choiceTemplate: (choice, i) -> "
   <label class=''>
 
@@ -28,12 +30,16 @@ class TextTask extends DecisionTree.Task
     output
     
   reset: (values) ->
-    inputs = @el.querySelectorAll "input[type=text]"
+    values ?= @defaults
+    inputs = @el.querySelectorAll "input[type]"
     input.value = '' for input in inputs
     
     for name of values
       input = @el.querySelector "input[name=#{name}]"
       input.value = values[name]
+  
+  setDefaults: (values) ->
+    @defaults[name] = values[name] for name of values
     
     
 DecisionTree.registerTask TextTask
