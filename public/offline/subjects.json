@@ -32,6 +32,12 @@
   "id": "ORC006",
   "zooniverse_id": "APK0000006",
   "group_id": "field",
-  "location": {"standard": "offline/BM000954651.jpg"},
-  "metadata": {"specimen_id": "BM000954651", "species": "test species"}
+  "location": {"standard": "offline/192FR.jpg"},
+  "metadata": {"specimen_id": "BM000954651", "species": "Anacamptis pyramidalis"}
+},{
+  "id": "ORC007",
+  "zooniverse_id": "APK0000007",
+  "group_id": "field",
+  "location": {"standard": "offline/IMG_6503.jpg"},
+  "metadata": {"specimen_id": "BM000954651", "species": ""}
 }]
