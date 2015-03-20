@@ -39,6 +39,8 @@ SubjectViewer::zoom = (scale = 1) ->
 currentProject = require 'zooniverse-readymade/current-project'
 herbarium_page = currentProject.classifyPages[0]
 field_page = currentProject.classifyPages[1]
+  
+herbarium_species = herbarium_page.decisionTree.el.querySelector('input[name=species]')
 
 for page in currentProject.classifyPages
   do (page) ->
@@ -63,6 +65,9 @@ for page in currentProject.classifyPages
           date: metadata.date
           locality: metadata.locality
           vc: metadata.vc
+          
+        # disable the herbarium species if NHM already know it.
+        herbarium_species.disabled = !!metadata.species.length
       
       if page.workflow is 'field'
         page.decisionTree.tasks.species.setDefaults

@@ -28,6 +28,10 @@ module.exports =
       question: 'Verify the specimen label'
       defaults: {}
       choices: [{
+        label: 'Species'
+        key: 'species'
+        value: ''
+      },{
         label: 'Date'
         key: 'date'
         value: ''
