@@ -4,11 +4,13 @@ require './readymade/overrides.coffee'
 SubjectMetadata = require './subject-metadata'
 SubjectViewer = require 'zooniverse-readymade/lib/subject-viewer'
 ClassifyPage = require 'zooniverse-readymade/lib/classify-page'
+SiteHeader = require 'zooniverse-readymade/lib/site-header'
   
 ClassifyPage::showPageHelp = () ->
   @fieldGuideContainer.attr 'aria-hidden', !@help.checked
 
 SubjectViewer::template = require './templates/subject-viewer'
+SiteHeader::template = require './templates/site-header'
 
 SubjectViewer::rescale = ()->
   width = Math.min MAX_PAGE_WIDTH, @markingSurface.el.parentNode.offsetWidth
