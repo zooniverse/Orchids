@@ -18,6 +18,10 @@ module.exports =
   pages: [{
       'Upload': 'This will be the iRecord form.'
     },{
+      'Resources': 'Links to resources for observers.'
+    },{
+      'Science': 'The science behind the project'
+    },{
     'About': [
       {
         'Orchid Observers': 'About the project.'
@@ -26,7 +30,9 @@ module.exports =
       }]
   }]
   
-  externalLinks: {}
+  externalLinks:
+    Talk: ''
+    Blog: ''
   
   workflows: [{
     key: 'herbarium'
