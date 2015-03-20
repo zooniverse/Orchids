@@ -48,12 +48,18 @@ module.exports =
       question: 'Identify the flowering stage of this specimen.'
       confirmButtonLabel: 'Finish'
       choices: [{
-        label: 'one'
-        value: 'one'
+        label: 'in bud'
+        value: 'bud'
       },{
-        label: 'two'
-        value: 'two'
+        label: '½ spike in flower'
+        value: 'half'
       },{
-        label: 'three'
-        value: 'three'
+        label: 'full spike in flower'
+        value: 'full'
+      },{
+        label: 'spike tip only in flower'
+        value: 'tip'
+      },{
+        label: 'flowering over/in fruit/seed'
+        value: 'over'
       }]

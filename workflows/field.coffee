@@ -26,14 +26,20 @@ module.exports =
       type: 'radio'
       question: 'Identify the flowering stage of this specimen.'
       choices: [{
-        label: 'one'
-        value: 'one'
+        label: 'in bud'
+        value: 'bud'
       },{
-        label: 'two'
-        value: 'two'
+        label: '½ spike in flower'
+        value: 'half'
       },{
-        label: 'three'
-        value: 'three'
+        label: 'full spike in flower'
+        value: 'full'
+      },{
+        label: 'spike tip only in flower'
+        value: 'tip'
+      },{
+        label: 'flowering over/in fruit/seed'
+        value: 'over'
       }]
       next: 'pollinators'
     pollinators:
