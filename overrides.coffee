@@ -57,6 +57,7 @@ for page in currentProject.classifyPages
       
       if page.workflow is 'herbarium'
         page.decisionTree.tasks.verify.setDefaults
+          species: metadata.species
           date: metadata.date
           locality: metadata.locality
           vc: metadata.vc
