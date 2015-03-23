@@ -6,6 +6,7 @@ module.exports =
   title: 'Orchid Observers'
   summary: 'hello world'
   description: '''
+    short project description goes here.
                  '''
   
 
