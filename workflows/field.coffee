@@ -8,7 +8,7 @@ module.exports =
   key: 'field'
   subjectGroup: 'field'
   label: 'Field photos'
-  firstTask: 'flowering'
+  firstTask: 'marking'
   examples: require '../content/examples'
   tutorialSteps: require '../content/tutorial-steps'
   tasks: 
@@ -22,32 +22,36 @@ module.exports =
         key: 'species'
         value: ''
       }]
-      next: 'flowering'
-    flowering:
-      type: 'radio'
-      question: 'Identify the flowering stage of this specimen.'
-      choices: [{
-        label: 'in bud'
-        value: 'bud'
-      },{
-        label: '½ spike in flower'
-        value: 'half'
-      },{
-        label: 'full spike in flower'
-        value: 'full'
-      },{
-        label: 'spike tip only in flower'
-        value: 'tip'
-      },{
-        label: 'flowering over/in fruit/seed'
-        value: 'over'
-      }]
-      next: 'pollinators'
-    pollinators:
+    marking:
       type: 'drawing'
       question: 'Help us identify any insects near the flower by clicking on them.'
       next: 'species'
       choices: [{
+          type: Pinpoint
+          label: 'Flowering'
+          value: 'flowering'
+          checked: true
+          details: [{
+            type: 'radio'
+            key: 'flowering'
+            choices: [{
+              label: 'in bud'
+              value: 'bud'
+            },{
+              label: '½ spike in flower'
+              value: 'half'
+            },{
+              label: 'full spike in flower'
+              value: 'full'
+            },{
+              label: 'spike tip only in flower'
+              value: 'tip'
+            },{
+              label: 'flowering over/in fruit/seed'
+              value: 'over'
+            }]
+          }]
+        },{
         type: Pinpoint
         label: 'Insects'
         value: 'insects'

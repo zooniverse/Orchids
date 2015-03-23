@@ -56,22 +56,31 @@ module.exports =
       }]
       next: null
     flowering:
-      type: 'radio'
+      type: 'drawing'
       question: 'Identify the flowering stage of this specimen.'
       next: 'marking'
       choices: [{
-        label: 'in bud'
-        value: 'bud'
-      },{
-        label: '½ spike in flower'
-        value: 'half'
-      },{
-        label: 'full spike in flower'
-        value: 'full'
-      },{
-        label: 'spike tip only in flower'
-        value: 'tip'
-      },{
-        label: 'flowering over/in fruit/seed'
-        value: 'over'
+        type: Pinpoint
+        label: 'Flowering stage'
+        value: 'flowering'
+        details: [{
+          type: 'radio'
+          key: 'flowering'
+          choices: [{
+            label: 'in bud'
+            value: 'bud'
+          },{
+            label: '½ spike in flower'
+            value: 'half'
+          },{
+            label: 'full spike in flower'
+            value: 'full'
+          },{
+            label: 'spike tip only in flower'
+            value: 'tip'
+          },{
+            label: 'flowering over/in fruit/seed'
+            value: 'over'
+          }]
+        }]
       }]
