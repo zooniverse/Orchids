@@ -29,8 +29,8 @@ SubjectViewer::crop = (rectangle, margin = 25, limit = 1.5)->
   @markingSurface.rescale rectangle.left - margin, rectangle.top - margin, w, h
 
 SubjectViewer::zoom = (scale = 1) ->
-  @scale = Math.min scale, 1
-  @scale = Math.max @scale, .2
+  @scale = Math.min scale, 1.5
+  @scale = Math.max @scale, .4
   @markingSurface.svg.attr
     width: @scale * @maxWidth
     height: @scale * @maxHeight
