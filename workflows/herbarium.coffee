@@ -8,7 +8,7 @@ module.exports =
   key: 'herbarium'
   label: 'Herbarium'
   subjectGroup: 'herbarium'
-  firstTask: 'marking'
+  firstTask: 'flowering'
   examples: require '../content/examples'
   tutorialSteps: require '../content/tutorial-steps'
   tasks:
@@ -26,6 +26,7 @@ module.exports =
     verify:
       type: 'text'
       question: 'Verify the specimen label'
+      confirmButtonLabel: 'Finish'
       defaults: {}
       choices: [{
         label: 'Species'
@@ -46,11 +47,11 @@ module.exports =
         type: 'number'
         length: 3
       }]
-      next: 'flowering'
+      next: null
     flowering:
       type: 'radio'
       question: 'Identify the flowering stage of this specimen.'
-      confirmButtonLabel: 'Finish'
+      next: 'marking'
       choices: [{
         label: 'in bud'
         value: 'bud'

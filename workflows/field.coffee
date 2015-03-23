@@ -8,13 +8,14 @@ module.exports =
   key: 'field'
   subjectGroup: 'field'
   label: 'Field photos'
-  firstTask: 'species'
+  firstTask: 'flowering'
   examples: require '../content/examples'
   tutorialSteps: require '../content/tutorial-steps'
   tasks: 
     species:
       type: 'text'
       question: 'Verify the species'
+      confirmButtonLabel: 'Finish'
       defaults: {}
       choices: [{
         label: 'Species'
@@ -43,11 +44,24 @@ module.exports =
       }]
       next: 'pollinators'
     pollinators:
-      type: 'textarea'
-      question: 'Identify any pollinating insects near the flower.'
-      confirmButtonLabel: 'Finish'
+      type: 'drawing'
+      question: 'Help us identify any insects near the flower by clicking on them.'
+      next: 'species'
       choices: [{
+        type: Pinpoint
         label: 'Insects'
-        key: 'insects'
-        value: ''
+        value: 'insects'
+        details: [{
+          type: 'text'
+          key: 'insects'
+          choices:[{
+            value: ''
+            key: 'common'
+            label: 'Common name'
+          },{
+            value: ''
+            key: 'scientific'
+            label: 'Scientific name (if known)'
+          }]
+        }]
       }]
