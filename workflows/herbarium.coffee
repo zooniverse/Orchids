@@ -44,8 +44,15 @@ module.exports =
         label: 'Vice-county'
         key: 'vc'
         value: ''
-        type: 'number'
         length: 3
+      },{
+        label: 'Label comments'
+        key: 'comments'
+        value: ''
+      },{
+        label: 'Registration'
+        key: 'registration'
+        value: ''
       }]
       next: null
     flowering:

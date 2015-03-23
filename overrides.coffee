@@ -65,6 +65,8 @@ for page in currentProject.classifyPages
           date: metadata.date
           locality: metadata.locality
           vc: metadata.vc
+          registration: metadata.registration
+          comments: metadata.comments
           
         # disable the herbarium species if NHM already know it.
         herbarium_species.disabled = !!metadata.species.length
