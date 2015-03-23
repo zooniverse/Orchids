@@ -14,9 +14,7 @@ module.exports =
     },{
       'Resources': 'Links to resources for observers.'
     },{
-      'Science': 'The science behind the project'
-    },{
-    'About': [
+    'Science': [
       {
         'Orchid Observers': 'About the project.'
       },{
