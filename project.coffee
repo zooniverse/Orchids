@@ -11,9 +11,13 @@ module.exports =
   
 
   pages: [{
-      'Upload': 'This will be the iRecord form.'
+      'Upload': [{
+        'Form': 'This will be the iRecord form.'
+      },{
+        'Resources': 'Links to resources for observers.'
+      }]
     },{
-      'Resources': 'Links to resources for observers.'
+      
     },{
     'Science': [
       {
