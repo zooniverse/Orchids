@@ -28,7 +28,7 @@ module.exports =
       next: 'species'
       choices: [{
           type: Pinpoint
-          label: 'Flowering'
+          label: 'Flowering stage'
           value: 'flowering'
           checked: true
           details: [{

@@ -53,6 +53,10 @@ for page in currentProject.classifyPages
     ms.on 'marking-surface:add-tool', (tool) ->
       @rescale() if @scaleX is 0
     
+      {label} = decisionTree.currentTask.getChoice() ? ''
+      legend = tool.controls.el.querySelector 'legend'
+      legend.textContent = label if legend?
+    
     page.on page.LOAD_SUBJECT, (e, subject)->
       ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
     
