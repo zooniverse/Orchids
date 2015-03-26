@@ -40,4 +40,46 @@
   "group_id": "field",
   "location": {"standard": "offline/IMG_6503.jpg"},
   "metadata": {"specimen_id": "BM000954651", "species": ""}
+},{
+  "id": "ORC008",
+  "zooniverse_id": "APK0000007",
+  "group_id": "field",
+  "location": {"standard": "offline/Burnt-tip Orchid - Aston Upthorpe 20070603 08.jpeg"},
+  "metadata": {"specimen_id": "BM000954651", "species": "Burnt-tip Orchid"}
+},{
+  "id": "ORC009",
+  "zooniverse_id": "APK0000007",
+  "group_id": "field",
+  "location": {"standard": "offline/fred.Anacamptis pyramidalis Kingsdown.jpeg"},
+  "metadata": {"specimen_id": "BM000954651", "species": "Anacamptis pyramidalis"}
+},{
+  "id": "ORC010",
+  "zooniverse_id": "APK0000007",
+  "group_id": "field",
+  "location": {"standard": "offline/fred.Dactylorhiza fuchsii Porton Down 2006 054.jpeg"},
+  "metadata": {"specimen_id": "BM000954651", "species": "Dactylorhiza fuchsii"}
+},{
+  "id": "ORC011",
+  "zooniverse_id": "APK0000007",
+  "group_id": "field",
+  "location": {"standard": "offline/fred.Gymnadenia Monzie7169.jpeg"},
+  "metadata": {"specimen_id": "BM000954651", "species": "Gymnadenia Monzie"}
+},{
+  "id": "ORC012",
+  "zooniverse_id": "APK0000007",
+  "group_id": "field",
+  "location": {"standard": "offline/fred.Gymnadenia Orton7132.jpeg"},
+  "metadata": {"specimen_id": "BM000954651", "species": "Gymnadenia Orton"}
+},{
+  "id": "ORC013",
+  "zooniverse_id": "APK0000007",
+  "group_id": "field",
+  "location": {"standard": "offline/Herminium monorchis Noar1.FR.jpeg"},
+  "metadata": {"specimen_id": "BM000954651", "species": "Herminium monorchis"}
+},{
+  "id": "ORC014",
+  "zooniverse_id": "APK0000007",
+  "group_id": "field",
+  "location": {"standard": "offline/IMGP0733.jpeg"},
+  "metadata": {"specimen_id": "BM000954651", "species": ""}
 }]
