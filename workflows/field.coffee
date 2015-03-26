@@ -24,7 +24,7 @@ module.exports =
       }]
     marking:
       type: 'drawing'
-      question: 'Help us identify any insects near the flower by clicking on them.'
+      question: 'Help us by labelling the flowering stage of each flower. Identify any insects in the photo by clicking on them.'
       next: 'species'
       choices: [{
           type: Pinpoint
@@ -35,17 +35,11 @@ module.exports =
             type: 'radio'
             key: 'flowering'
             choices: [{
-              label: 'in bud'
+              label: 'mainly in bud'
               value: 'bud'
             },{
-              label: '½ spike in flower'
-              value: 'half'
-            },{
-              label: 'full spike in flower'
-              value: 'full'
-            },{
-              label: 'spike tip only in flower'
-              value: 'tip'
+              label: 'mainly in flower'
+              value: 'flower'
             },{
               label: 'flowering over/in fruit/seed'
               value: 'over'

@@ -67,17 +67,11 @@ module.exports =
           type: 'radio'
           key: 'flowering'
           choices: [{
-            label: 'in bud'
+            label: 'mainly in bud'
             value: 'bud'
           },{
-            label: '½ spike in flower'
-            value: 'half'
-          },{
-            label: 'full spike in flower'
-            value: 'full'
-          },{
-            label: 'spike tip only in flower'
-            value: 'tip'
+            label: 'mainly in flower'
+            value: 'flower'
           },{
             label: 'flowering over/in fruit/seed'
             value: 'over'
