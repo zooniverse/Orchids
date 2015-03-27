@@ -79,6 +79,9 @@ class OrchidFilterTask extends RadioTask
     @menus[index].value = ''
     delete @currentFilters[@filters[index].key]
     @reflectFilter @currentFilters
+  
+  clearFilters: ->
+    @clearFilter i for filter, i in @filters
 
   reflectFilter: (filterSettings) ->
     choiceEls = @el.querySelectorAll '.decision-tree-choice'

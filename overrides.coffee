@@ -80,6 +80,9 @@ for page in currentProject.classifyPages
         # disable the herbarium species if NHM already know it.
         herbarium_species.disabled = !!metadata.species.length
       
+      if page.workflow is 'field'
+        page.decisionTree.tasks.species.clearFilters()
+      
 
 subject_metadata = new SubjectMetadata
 herbarium_page.el.find('.decision-tree').prepend subject_metadata.el
