@@ -88,15 +88,25 @@
     
     .decision-tree-task
     
-      &[data-task-type=filter]
+      .readymade-filter-menu
+        background: white
+        max-width: 10em
+    
+      &[data-task-type=accessible-filter]
       
         .decision-tree-choice
           display: inline-block
-          width: 30%
+          width: 15%
           
-          label
-            display: inline
+          .readymade-choice-label
             font-size: .6em
+          
+          input:checked + .readymade-choice-clickable
+            background: #000
+            font-weight: bold
+      
+        [aria-hidden=true]
+          display: none
   
   .readymade-field-guide-container
     position: absolute
@@ -225,7 +235,7 @@
     top: 6em
     flex: 1
     min-width: 15%
-    max-width: 200px
+    max-width: 300px
     z-index: 5
   
   .drawing-controls

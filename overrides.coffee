@@ -5,6 +5,9 @@ SubjectMetadata = require './subject-metadata'
 SubjectViewer = require 'zooniverse-readymade/lib/subject-viewer'
 ClassifyPage = require 'zooniverse-readymade/lib/classify-page'
 SiteHeader = require 'zooniverse-readymade/lib/site-header'
+
+OrchidFilterTask = require './tasks/filter'
+DecisionTree = require 'zooniverse-decision-tree'
   
 ClassifyPage::showPageHelp = () ->
   @fieldGuideContainer.attr 'aria-hidden', !@help.checked
@@ -76,10 +79,6 @@ for page in currentProject.classifyPages
           
         # disable the herbarium species if NHM already know it.
         herbarium_species.disabled = !!metadata.species.length
-      
-      if page.workflow is 'field'
-        page.decisionTree.tasks.species.setDefaults
-          species: metadata.species
       
 
 subject_metadata = new SubjectMetadata

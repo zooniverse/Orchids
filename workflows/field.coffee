@@ -3,6 +3,7 @@ Pinpoint = require '../drawing-tools/pinpoint'
 FreeDraw = require '../drawing-tools/free-draw-tool'
 TextTask = require '../tasks/text'
 TextareaTask = require '../tasks/textarea'
+OrchidFilterTask = require '../tasks/filter'
 
 module.exports =
   key: 'field'
@@ -13,7 +14,7 @@ module.exports =
   tutorialSteps: require '../content/tutorial-steps'
   tasks: 
     species:
-      type: 'filter'
+      type: OrchidFilterTask.type
       question: 'Verify the species'
       confirmButtonLabel: 'Finish'
       filters: [{
