@@ -6,6 +6,8 @@
 
 **Merged pull requests:**
 
+- Organise the species filter into separate files [\#3](https://github.com/zooniverse/Orchids/pull/3) ([eatyourgreens](https://github.com/eatyourgreens))
+
 - Species filter control [\#2](https://github.com/zooniverse/Orchids/pull/2) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Add a filtered list of orchid types [\#1](https://github.com/zooniverse/Orchids/pull/1) ([eatyourgreens](https://github.com/eatyourgreens))
