@@ -4,11 +4,17 @@ User = require 'zooniverse/models/user'
 
 class UploadForm extends Controller
   
-  template: (context) -> "
-    <h2>Upload</h2>
-    <p>This will be the upload form.</p>
-    <p>Current user: #{User.current?.name}</p>
-  "
+  template: (context) ->
+    logged_in = """
+        <h2>Upload</h2>
+        <iframe name=upload title="Upload photos to the Biodiversity Research Centre" seamless src='http://www.brc.ac.uk/iframe-host/zooniverse/enter-orchid-record?external=t&email=#{User.current?.email}&username=#{User.current?.name}'></iframe>
+      """
+    logged_out = """
+      <h2>Upload</h2>
+      <p>Please log in to upload photos.</p>
+      """
+    template = if User.current then logged_in else logged_out
+      
   
   constructor: ->
     super
@@ -16,6 +22,9 @@ class UploadForm extends Controller
     
     @listenTo User, 'change', (e, user) =>
       @el.html @template @
+      
+      iframe = @el.find 'iframe[name=upload]'
+      iframe[0]?.style.minHeight = window.innerHeight + 'px'
         
   
   listenTo: (thing, eventName, handler) ->
