@@ -6,6 +6,8 @@
 
 **Merged pull requests:**
 
+- Embed the BRC upload form iframe [\#6](https://github.com/zooniverse/Orchids/pull/6) ([eatyourgreens](https://github.com/eatyourgreens))
+
 - Move zoom buttons into the marking surface container [\#5](https://github.com/zooniverse/Orchids/pull/5) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Organise the species filter into separate files [\#3](https://github.com/zooniverse/Orchids/pull/3) ([eatyourgreens](https://github.com/eatyourgreens))
