@@ -6,11 +6,15 @@
 
 **Merged pull requests:**
 
+- Move zoom buttons into the marking surface container [\#5](https://github.com/zooniverse/Orchids/pull/5) ([eatyourgreens](https://github.com/eatyourgreens))
+
 - Organise the species filter into separate files [\#3](https://github.com/zooniverse/Orchids/pull/3) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Species filter control [\#2](https://github.com/zooniverse/Orchids/pull/2) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Add a filtered list of orchid types [\#1](https://github.com/zooniverse/Orchids/pull/1) ([eatyourgreens](https://github.com/eatyourgreens))
+
+- Move zoom buttons into the marking surface container [\#4](https://github.com/zooniverse/Orchids/pull/4) ([eatyourgreens](https://github.com/eatyourgreens))
 
 ## [v0.1.0](https://github.com/zooniverse/Orchids/tree/v0.1.0) (2015-03-20)
 
