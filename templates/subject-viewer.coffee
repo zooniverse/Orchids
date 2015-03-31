@@ -3,20 +3,6 @@ translate = require 'zooniverse/lib/translate'
 module.exports = -> """
   <div class="drawing-controls">
     
-    <button name="zoom-in" title="Zoom in">
-      <span class="readymade-clickable small">
-        <i class="fa fa-search-plus"></i>
-        <span>Zoom in</span>
-      </span>
-    </button>
-    
-    <button name="zoom-out" title="Zoom out">
-      <span class="readymade-clickable small">
-        <i class="fa fa-search-minus"></i>
-        <span>Zoom out</span>
-      </span>
-    </button>
-    
     <label class="readymade-has-clickable" title="Help">
       <input type="checkbox" name="help" />
       <span class="readymade-clickable small">
@@ -44,7 +30,23 @@ module.exports = -> """
     
   </div>
 
-  <div class="readymade-marking-surface-container"></div>
+  <div class="readymade-marking-surface-container">
+    <div class="drawing-controls">
+      <button name="zoom-in" title="Zoom in">
+        <span class="readymade-clickable small">
+          <i class="fa fa-search-plus"></i>
+          <span>Zoom in</span>
+        </span>
+      </button>
+    
+      <button name="zoom-out" title="Zoom out">
+        <span class="readymade-clickable small">
+          <i class="fa fa-search-minus"></i>
+          <span>Zoom out</span>
+        </span>
+      </button>
+    </div>
+  </div>
 
   <div class="readymade-frame-controls">
     <div class="readymade-frame-play-controls">
