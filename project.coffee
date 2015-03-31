@@ -1,3 +1,6 @@
+UploadForm = require './upload'
+upload_form = new UploadForm
+
 module.exports =
   id: 'orchids'
   background: 'background.jpg'
@@ -12,12 +15,10 @@ module.exports =
 
   pages: [{
       'Upload': [{
-        'Form': 'This will be the iRecord form.'
+        'Form': upload_form
       },{
         'Resources': 'Links to resources for observers.'
       }]
-    },{
-      
     },{
     'Science': [
       {
