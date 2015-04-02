@@ -3,30 +3,35 @@ Pinpoint = require '../drawing-tools/pinpoint'
 FreeDraw = require '../drawing-tools/free-draw-tool'
 TextTask = require '../tasks/text'
 TextareaTask = require '../tasks/textarea'
+MagnifierPoint = require '../drawing-tools/magnifier-point'
 
 module.exports =
   key: 'herbarium'
   label: 'Herbarium'
   subjectGroup: 'herbarium'
-  firstTask: 'flowering'
+  firstTask: 'barcode'
   examples: require '../content/examples'
   tutorialSteps: require '../content/tutorial-steps'
   tasks:
-    marking:
+    barcode:
       type: 'drawing'
-      question: 'Draw a rectangle around the label for this specimen'
+      question: 'Find the barcode for this specimen'
       choices: [{
+        type: MagnifierPoint
+        label: 'Barcode'
+        value: 'barcode'
+        color: '#660066'
+        checked: true
+      },{
         type: Rectangle
         label: 'Specimen label'
-        value: 'rectangle'
+        value: 'specimen-label'
         color: '#006666'
-        checked: true
       }]
       next: 'verify'
     verify:
       type: 'text'
-      question: 'Verify the specimen label'
-      confirmButtonLabel: 'Finish'
+      question: 'Verify the written specimen label'
       defaults: {}
       choices: [{
         label: 'Species'
@@ -41,24 +46,31 @@ module.exports =
         key: 'locality'
         value: ''
       },{
+        label: 'Label comments'
+        key: 'comments'
+        value: ''
+      }]
+      next: 'vc'
+    vc:
+      type: 'text'
+      question: 'There may be a VC number and registration label also on the sheet.'
+      defaults: {}
+      choices: [{
         label: 'Vice-county'
         key: 'vc'
         value: ''
         length: 3
       },{
-        label: 'Label comments'
-        key: 'comments'
-        value: ''
-      },{
         label: 'Registration'
         key: 'registration'
         value: ''
       }]
-      next: null
+      next: 'flowering'
     flowering:
       type: 'drawing'
       question: 'Identify the flowering stage of this specimen.'
       next: 'marking'
+      confirmButtonLabel: 'Finish'
       choices: [{
         type: Pinpoint
         label: 'Flowering stage'

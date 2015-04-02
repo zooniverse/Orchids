@@ -3,6 +3,15 @@ ToolControls = require './tool-controls'
 
 class Rectangle extends RectangleTool
   @Controls: ToolControls
+  @count = 0
+  
+  constructor: ->
+    super
+    Rectangle.count++
+  
+  destroy: =>
+    super
+    Rectangle.count--
   
   coords: (e) ->
     @markingSurface.screenPixelToScale @markingSurface.svg.pointerOffset e

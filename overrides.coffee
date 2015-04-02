@@ -29,7 +29,8 @@ SubjectViewer::crop = (rectangle, margin = 25, limit = 1.5)->
   scale = Math.min scale, limit
   @markingSurface.svg.attr 'width', scale * w
   @markingSurface.svg.attr 'height', scale * h
-  @markingSurface.rescale rectangle.left - margin, rectangle.top - margin, w, h
+  @markingSurface.svg.attr 'viewBox', [rectangle.left - margin, rectangle.top - margin, w, h].join ' '
+  @markingSurface.rescale()
 
 SubjectViewer::zoom = (scale = 1) ->
   @scale = Math.min scale, 1.4
@@ -57,13 +58,25 @@ for page in currentProject.classifyPages
     # set the image scale if not already set  
     ms.on 'marking-surface:add-tool', (tool) ->
       @rescale() if @scaleX is 0
+      if tool.constructor.count > 1
+        tool.deselect()
+        tool.destroy()
     
       {label} = decisionTree.currentTask.getChoice() ? ''
-      legend = tool.controls.el.querySelector 'legend'
+      legend = tool.controls?.el.querySelector 'legend'
       legend.textContent = label if legend?
     
     page.on page.LOAD_SUBJECT, (e, subject)->
       ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
+    
+    page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task}})->
+      if task.key is 'verify'
+        rectangle = tool.mark for tool in ms.tools when tool.mark.value is 'specimen-label'
+        subjectViewer.crop rectangle
+      else
+        subjectViewer.rescale()
+        ms.svg.attr 'viewBox', [0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight].join ' '
+        ms.rescale()
     
     page.Subject.on 'select', (e, subject)->
       {metadata} = subject
@@ -73,9 +86,11 @@ for page in currentProject.classifyPages
           species: metadata.species
           date: metadata.date
           locality: metadata.locality
+          comments: metadata.comments
+        
+        page.decisionTree.tasks.vc.setDefaults
           vc: metadata.vc
           registration: metadata.registration
-          comments: metadata.comments
           
         # disable the herbarium species if NHM already know it.
         herbarium_species.disabled = !!metadata.species.length
