@@ -1,8 +1,9 @@
 MarkingSurface = require 'marking-surface'
 
 MarkingSurface.prototype.rescale = (x, y, width, height) ->
-  root = @root.el.getBoundingClientRect()
-  return if root.width is 0 # don't rescale when surface isn't visible
+  image = @root.el.querySelector 'g.frames image'
+  image = image.getBoundingClientRect()
+  return unless image.width # don't rescale when surface isn't visible
   return unless @maxWidth? # don't rescale until image has been loaded
   currentViewBox = @svg.attr('viewBox')?.split /\s+/
   x ?= parseInt currentViewBox?[0] ? 0
@@ -11,9 +12,8 @@ MarkingSurface.prototype.rescale = (x, y, width, height) ->
   height ?= parseInt currentViewBox?[3] ? @maxHeight
   @svg.attr 'viewBox', [x, y, width, height].join ' '
   
-  root = @root.el.getBoundingClientRect()
-  @scaleX = root.width / @maxWidth
-  @scaleY = root.height / @maxHeight
+  @scaleX = image.width / @maxWidth
+  @scaleY = image.height / @maxHeight
   @magnification = (@scaleX + @scaleY) / 2
   
   # recalculate the viewbox so that the aspect ratio matches the SVG element
