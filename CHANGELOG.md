@@ -6,6 +6,8 @@
 
 **Merged pull requests:**
 
+- Herbarium tasks [\#7](https://github.com/zooniverse/Orchids/pull/7) ([eatyourgreens](https://github.com/eatyourgreens))
+
 - Embed the BRC upload form iframe [\#6](https://github.com/zooniverse/Orchids/pull/6) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Move zoom buttons into the marking surface container [\#5](https://github.com/zooniverse/Orchids/pull/5) ([eatyourgreens](https://github.com/eatyourgreens))
