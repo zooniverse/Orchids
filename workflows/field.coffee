@@ -4,6 +4,7 @@ FreeDraw = require '../drawing-tools/free-draw-tool'
 TextTask = require '../tasks/text'
 TextareaTask = require '../tasks/textarea'
 OrchidFilterTask = require '../tasks/filter'
+MagnifierPoint = require 'marking-surface/lib/tools/magnifier-point'
 
 module.exports =
   key: 'field'
@@ -46,7 +47,7 @@ module.exports =
             }]
           }]
         },{
-        type: Pinpoint
+        type: MagnifierPoint
         label: 'Insects'
         value: 'insects'
         details: [{
