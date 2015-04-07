@@ -2,7 +2,7 @@ UploadForm = require './upload'
 upload_form = new UploadForm
 
 module.exports =
-  id: 'orchids'
+  id: 'orchid'
   background: 'background.jpg'
   subjectGroup: false
 
