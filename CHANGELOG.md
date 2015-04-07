@@ -4,6 +4,10 @@
 
 [Full Changelog](https://github.com/zooniverse/Orchids/compare/v0.1.0...HEAD)
 
+**Implemented enhancements:**
+
+- Updated orchid types list [\#8](https://github.com/zooniverse/Orchids/issues/8)
+
 **Merged pull requests:**
 
 - Herbarium tasks [\#7](https://github.com/zooniverse/Orchids/pull/7) ([eatyourgreens](https://github.com/eatyourgreens))
