@@ -39,43 +39,43 @@ module.exports =
           label: 'Marsh Helleborine'
           value: 'marsh-helleborine'
           traits: 
-            colour: ["white-purple"]
+            colour: ["multi"]
             habitat: ["marshes"]
         },{
           label: 'Common Spotted-orchid'
           value: 'common-spotted'
           traits: 
-            colour: ["pale-pink", "pink", "purplish-pink"]
+            colour: ["pale-pink", "pink"]
             habitat: ["deciduous", "grassland", "marshes", "dunes"]
         },{
           label: 'Green-winged Orchid'
           value: 'green-winged'
           traits: 
-            colour: ["pale-pink", "pink", "purplish-pink"]
+            colour: ["pale-pink", "pink"]
             habitat: ["grassland", "dunes", "verges"]
         },{
           label: 'Pyramidal Orchid'
           value: 'pyramidal'
           traits: 
-            colour: ["pale-pink", "pink", "reddish-pink"]
+            colour: ["pale-pink", "pink"]
             habitat: ["grassland", "marshes", "verges"]
         },{
           label: 'Heath Spotted-orchid'
           value: 'heath-spotted'
           traits: 
-            colour: ["purplish-pink"]
+            colour: ["pale-pink"]
             habitat: ["grassland", "heathland"]
         },{
           label: 'Southern Marsh-orchid'
           value: 'southern-marsh'
           traits: 
-            colour: ["purplish-pink"]
+            colour: ["pink"]
             habitat: ["marshes", "quarries"]
         },{
           label: 'Marsh Fragrant-orchid'
           value: 'marsh-fragrant'
           traits: 
-            colour: ["purplish-pink"]
+            colour: ["pink"]
             habitat: ["marshes"]
         },{
           label: 'Heath Fragrant-orchid'

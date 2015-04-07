@@ -5,9 +5,6 @@ module.exports =
     value: "white"
     label: "White"
   }, {
-    value: "white-purple"
-    label: "White & purple"
-  }, {
     value: "pale-pink"
     label: "Pale pink"
   },{
@@ -15,13 +12,7 @@ module.exports =
     label: "Lilac-purple"
   },{
     value: "pink"
-    label: "Pink"
-  },{
-    value: "reddish-pink"
-    label: "Reddish-pink"
-  },{
-    value: "purplish-pink"
-    label: "Purplish-pink"
+    label: "Pink to purplish-pink"
   },{
     value: "purple"
     label: "Purple"
