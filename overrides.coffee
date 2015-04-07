@@ -72,8 +72,7 @@ for page in currentProject.classifyPages
         subjectViewer.crop rectangle
       else
         subjectViewer.rescale()
-        ms.svg.attr 'viewBox', [0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight].join ' '
-        ms.rescale()
+        ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
     
     page.Subject.on 'select', (e, subject)->
       {metadata} = subject
