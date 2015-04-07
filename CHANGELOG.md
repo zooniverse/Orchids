@@ -10,6 +10,8 @@
 
 **Merged pull requests:**
 
+- SVG crop and zoom [\#9](https://github.com/zooniverse/Orchids/pull/9) ([eatyourgreens](https://github.com/eatyourgreens))
+
 - Herbarium tasks [\#7](https://github.com/zooniverse/Orchids/pull/7) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Embed the BRC upload form iframe [\#6](https://github.com/zooniverse/Orchids/pull/6) ([eatyourgreens](https://github.com/eatyourgreens))
