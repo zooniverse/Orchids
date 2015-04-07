@@ -18,8 +18,6 @@ SiteHeader::template = require './templates/site-header'
 SubjectViewer::rescale = ()->
   width = Math.min MAX_PAGE_WIDTH, @markingSurface.el.parentNode.offsetWidth
   scale = width / @maxWidth
-  @markingSurface.maxWidth = @maxWidth
-  @markingSurface.maxHeight = @maxHeight
   @zoom scale
 
 SubjectViewer::crop = (rectangle, margin = 25, limit = 1.5)->
@@ -29,8 +27,7 @@ SubjectViewer::crop = (rectangle, margin = 25, limit = 1.5)->
   scale = Math.min scale, limit
   @markingSurface.svg.attr 'width', scale * w
   @markingSurface.svg.attr 'height', scale * h
-  @markingSurface.svg.attr 'viewBox', [rectangle.left - margin, rectangle.top - margin, w, h].join ' '
-  @markingSurface.rescale()
+  @markingSurface.rescale rectangle.left - margin, rectangle.top - margin, w, h
 
 SubjectViewer::zoom = (scale = 1) ->
   @scale = Math.min scale, 1.4

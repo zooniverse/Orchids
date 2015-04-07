@@ -1,20 +1,25 @@
 MarkingSurface = require 'marking-surface'
 
-MarkingSurface.prototype.rescale = (x, y, width, height) ->
+MarkingSurface::rescale = (x, y, width, height) ->
   image = @root.el.querySelector 'g.frames image'
-  image = image.getBoundingClientRect()
-  return unless image.width # don't rescale when surface isn't visible
-  return unless @maxWidth? # don't rescale until image has been loaded
+  rect = image.getBoundingClientRect()
+  return unless rect.width # rect.width will be 0 if the image is set to display: none
+  
+  maxWidth = parseInt image.getAttribute 'width'
+  maxHeight = parseInt image.getAttribute 'height'
+  return unless maxWidth # don't rescale until image has been loaded
+  
+  # set some sensible defaults for viewbox; current viewbox or subject image dimensions
   currentViewBox = @svg.attr('viewBox')?.split /\s+/
   x ?= parseInt currentViewBox?[0] ? 0
   y ?= parseInt currentViewBox?[1] ? 0
-  width ?= parseInt currentViewBox?[2] ? @maxWidth
-  height ?= parseInt currentViewBox?[3] ? @maxHeight
+  width ?= parseInt currentViewBox?[2] ? maxWidth
+  height ?= parseInt currentViewBox?[3] ? maxHeight
   @svg.attr 'viewBox', [x, y, width, height].join ' '
+  rect = image.getBoundingClientRect()
   
-  @scaleX = image.width / @maxWidth
-  @scaleY = image.height / @maxHeight
-  @magnification = (@scaleX + @scaleY) / 2
+  @scaleX = rect.width / maxWidth
+  @scaleY = rect.height / maxHeight
   
   # recalculate the viewbox so that the aspect ratio matches the SVG element
   w = parseInt @svg.attr 'width'
@@ -25,8 +30,8 @@ MarkingSurface.prototype.rescale = (x, y, width, height) ->
   y = y + .5 * (height - h)
   x = Math.max x, 0
   y = Math.max y, 0
-  x = Math.min x, @maxWidth - w
-  y = Math.min y, @maxHeight - h
+  x = Math.min x, maxWidth - w
+  y = Math.min y, maxHeight - h
   @svg.attr 'viewBox', [x, y, w, h].join ' '
   @renderTools()
 
