@@ -25,9 +25,12 @@ SubjectViewer::crop = (rectangle, margin = 25, limit = 1.5)->
   h = rectangle.height + margin * 2
   scale = @markingSurface.el.parentNode.offsetWidth / w
   scale = Math.min scale, limit
-  @markingSurface.svg.attr 'width', scale * w
-  @markingSurface.svg.attr 'height', scale * h
+  @markingSurface.svg.attr 'width', parseInt scale * w
+  @markingSurface.svg.attr 'height', parseInt scale * h
   @markingSurface.rescale rectangle.left - margin, rectangle.top - margin, w, h
+  @maxWidth = w
+  @maxHeight = h
+  @zoom @markingSurface.scaleX
 
 SubjectViewer::zoom = (scale = 1) ->
   @scale = Math.min scale, 1.4
@@ -35,8 +38,8 @@ SubjectViewer::zoom = (scale = 1) ->
   width = Math.min @scale * @maxWidth, 1.4 * @markingSurface.el.parentNode.offsetWidth
   @scale = width / @maxWidth
   @markingSurface.svg.attr
-    width: width
-    height: @scale * @maxHeight
+    width: parseInt width
+    height: parseInt @scale * @maxHeight
   @markingSurface.rescale()
 
 currentProject = require 'zooniverse-readymade/current-project'
@@ -71,6 +74,9 @@ for page in currentProject.classifyPages
         rectangle = tool.mark for tool in ms.tools when tool.mark.value is 'specimen-label'
         subjectViewer.crop rectangle
       else
+        image = ms.root.el.querySelector 'g.frames image'
+        subjectViewer.maxWidth = parseInt image.getAttribute 'width'
+        subjectViewer.maxHeight = parseInt image.getAttribute 'height'
         subjectViewer.rescale()
         ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
     

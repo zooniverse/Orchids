@@ -24,10 +24,10 @@ MarkingSurface::rescale = (x, y, width, height) ->
   # recalculate the viewbox so that the aspect ratio matches the SVG element
   w = parseInt @svg.attr 'width'
   h = parseInt @svg.attr 'height'
-  w = w / @scaleX
-  h = h / @scaleY
-  x = x + .5 * (width - w)
-  y = y + .5 * (height - h)
+  w = parseInt w / @scaleX
+  h = parseInt h / @scaleY
+  x = parseInt x + .5 * (width - w)
+  y = parseInt y + .5 * (height - h)
   x = Math.max x, 0
   y = Math.max y, 0
   x = Math.min x, maxWidth - w
