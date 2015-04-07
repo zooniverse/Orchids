@@ -8,7 +8,7 @@ MagnifierPoint = require '../drawing-tools/magnifier-point'
 module.exports =
   key: 'herbarium'
   label: 'Herbarium'
-  subjectGroup: 'herbarium'
+  subjectGroup: '5523e3577b9f994c14000001'
   firstTask: 'barcode'
   examples: require '../content/examples'
   tutorialSteps: require '../content/tutorial-steps'
