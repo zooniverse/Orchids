@@ -21,8 +21,8 @@ module.exports =
     label: "Dunes and dune slacks"
   },{
     value: "quarries"
-    label: "Man-made (quarries, railway lines, old industrial sites etc)"
+    label: "Human-made (quarries, railway lines, old industrial sites etc)"
   },{
     value: "verges"
-    label: "Man-made (road verges, churchyards etc)"
+    label: "Human-made (road verges, churchyards etc)"
   }]
