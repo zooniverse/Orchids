@@ -1,14 +1,15 @@
-MagnifierPoint = require 'marking-surface/lib/tools/magnifier-point'
+BaseMagnifierPoint = require 'marking-surface/lib/tools/magnifier-point'
 
-class SingleMagnifierPoint extends MagnifierPoint
-  @count = 0
+class MagnifierPoint extends BaseMagnifierPoint
+  @Controls: require './fieldset-controls'
   
-  constructor: ->
+  render: ->
     super
-    SingleMagnifierPoint.count++
-  
-  destroy: =>
-    super
-    SingleMagnifierPoint.count--
     
-module.exports = SingleMagnifierPoint
+    offset = @selectedRadius / @markingSurface.scaleX
+    
+    @controls.moveTo
+      x: @mark.x + offset
+      y: @mark.y
+    
+module.exports = MagnifierPoint

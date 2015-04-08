@@ -3,7 +3,7 @@ Pinpoint = require '../drawing-tools/pinpoint'
 FreeDraw = require '../drawing-tools/free-draw-tool'
 TextTask = require '../tasks/text'
 TextareaTask = require '../tasks/textarea'
-MagnifierPoint = require '../drawing-tools/magnifier-point'
+SingleMagnifierPoint = require '../drawing-tools/single-magnifier-point'
 
 module.exports =
   key: 'herbarium'
@@ -17,7 +17,7 @@ module.exports =
       type: 'drawing'
       question: 'Find the barcode for this specimen'
       choices: [{
-        type: MagnifierPoint
+        type: SingleMagnifierPoint
         label: 'Barcode'
         value: 'barcode'
         color: '#660066'

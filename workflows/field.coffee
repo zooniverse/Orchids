@@ -4,7 +4,7 @@ FreeDraw = require '../drawing-tools/free-draw-tool'
 TextTask = require '../tasks/text'
 TextareaTask = require '../tasks/textarea'
 OrchidFilterTask = require '../tasks/filter'
-MagnifierPoint = require 'marking-surface/lib/tools/magnifier-point'
+MagnifierPoint = require '../drawing-tools/magnifier-point'
 
 module.exports =
   key: 'field'
@@ -51,16 +51,12 @@ module.exports =
         label: 'Insects'
         value: 'insects'
         details: [{
-          type: 'text'
+          type: 'textarea'
           key: 'insects'
           choices:[{
             value: ''
-            key: 'common'
-            label: 'Common name'
-          },{
-            value: ''
-            key: 'scientific'
-            label: 'Scientific name (if known)'
+            key: 'comments'
+            label: 'What insects can you see?'
           }]
         }]
       }]
