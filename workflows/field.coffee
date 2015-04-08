@@ -16,8 +16,7 @@ module.exports =
   tasks: 
     species:
       type: OrchidFilterTask.type
-      question: 'Identify the type of orchid'
-      confirmButtonLabel: 'Finish'
+      question: 'Pick a photo to identify the type of orchid'
       filters: [
         require './filter-colours'
         require './filter-habitats'
@@ -27,6 +26,7 @@ module.exports =
     marking:
       type: 'drawing'
       question: 'Help us by labelling the flowering stage of each flower. Identify any insects in the photo by clicking on them.'
+      confirmButtonLabel: 'Finish'
       choices: [{
           type: Pinpoint
           label: 'Flowering stage'
