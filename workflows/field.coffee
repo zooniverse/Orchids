@@ -10,23 +10,23 @@ module.exports =
   key: 'field'
   subjectGroup: 'field'
   label: 'Field photos'
-  firstTask: 'marking'
+  firstTask: 'species'
   examples: require '../content/examples'
   tutorialSteps: require '../content/tutorial-steps'
   tasks: 
     species:
       type: OrchidFilterTask.type
-      question: 'Verify the species'
+      question: 'Identify the type of orchid'
       confirmButtonLabel: 'Finish'
       filters: [
         require './filter-colours'
         require './filter-habitats'
       ]
       choices: require './orchid-types'
+      next: 'marking'
     marking:
       type: 'drawing'
       question: 'Help us by labelling the flowering stage of each flower. Identify any insects in the photo by clicking on them.'
-      next: 'species'
       choices: [{
           type: Pinpoint
           label: 'Flowering stage'
