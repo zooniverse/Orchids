@@ -2,6 +2,7 @@ MAX_PAGE_WIDTH = 600
 
 require './readymade/overrides.coffee'
 SubjectMetadata = require './subject-metadata'
+OrchidType = require './orchid-type'
 SubjectViewer = require 'zooniverse-readymade/lib/subject-viewer'
 ClassifyPage = require 'zooniverse-readymade/lib/classify-page'
 SiteHeader = require 'zooniverse-readymade/lib/site-header'
@@ -103,6 +104,9 @@ for page in currentProject.classifyPages
 
 subject_metadata = new SubjectMetadata
 herbarium_page.el.find('.decision-tree').prepend subject_metadata.el
+
+orchid_type = new OrchidType
+field_page.el.find('.decision-tree').before orchid_type.el
     
 # herbarium_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task, index}})->
   

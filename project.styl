@@ -111,13 +111,30 @@
           display: inline-block
           width: 15%
           
+          .readymade-choice-clickable
+            padding: 2px
+          
+          .readymade-choice-image img
+            max-width: 35px
+            max-height: 35px
+          
           .readymade-choice-label
+            width: 0
+            overflow: hidden
             font-size: .6em
             min-height: 35px
+            margin-left: -20px
           
           input:checked + .readymade-choice-clickable
-            background: #000
+            background: #eee
             font-weight: bold
+            
+            .readymade-choice-label
+              width: auto
+              overflow: visible
+              background: #333
+              background: rgba(0, 0, 0, 0.5)
+              
       
         [aria-hidden=true]
           display: none
@@ -262,6 +279,27 @@
   
   .drawing-controls
     right: 4em
+  
+  .orchid-type
+    position: absolute
+    top: 5em
+    left: -15em
+    text-align: center
+    
+    &[aria-hidden=true]
+      display: none
+    
+    img
+      z-index: 1
+    
+    p
+      background: #333
+      background: rgba(0, 0, 0, 0.5)
+      color: white
+      margin: 0
+      position: absolute
+      bottom: 0
+      width: 100%
     
   .readymade-decision-tree-container
   .readymade-summary-container
