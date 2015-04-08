@@ -17,7 +17,7 @@ SubjectViewer::template = require './templates/subject-viewer'
 SiteHeader::template = require './templates/site-header'
 
 SubjectViewer::rescale = ()->
-  width = Math.min MAX_PAGE_WIDTH, @markingSurface.el.parentNode.offsetWidth
+  width = Math.min MAX_PAGE_WIDTH, .5 * window.innerWidth
   scale = width / @maxWidth
   @zoom scale
 
