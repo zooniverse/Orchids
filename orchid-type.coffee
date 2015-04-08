@@ -6,8 +6,8 @@ class OrchidType extends Controller
   
   template: (context) ->
     "
-      <img src='#{context.orchid.image.replace '/thumb', '/full'}' alt=''>
-      <p>#{context.orchid.label}</p>
+      <img src='#{context.orchid?.image.replace '/thumb', '/full'}' alt=''>
+      <p>#{context.orchid?.label}</p>
     "
   
   orchid:
@@ -31,8 +31,9 @@ class OrchidType extends Controller
   
         if key is 'species'
           @orchid = field_page.decisionTree.currentTask.getChoice()
-          @el.html @template @
-          @el.attr 'aria-hidden', false
+          if @orchid
+            @el.html @template @
+            @el.attr 'aria-hidden', false
   
   listenTo: (thing, eventName, handler) ->
     addEvent = if 'on' of thing then 'on' else 'addEventListener'
