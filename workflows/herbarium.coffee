@@ -15,7 +15,7 @@ module.exports =
   tasks:
     barcode:
       type: 'drawing'
-      question: 'Find the barcode for this specimen'
+      question: 'Find the barcode and handwritten label for this specimen'
       choices: [{
         type: SingleMagnifierPoint
         label: 'Barcode'
