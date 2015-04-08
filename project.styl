@@ -114,21 +114,24 @@
           
         .decision-tree-choice
           display: inline-block
-          width: 15%
+          width: 44px
           
           .readymade-choice-clickable
             padding: 2px
           
-          .readymade-choice-image img
-            max-width: 35px
-            max-height: 35px
+          .readymade-choice-image 
+            width: 0
+            
+            img
+              max-width: 40px
+              max-height: 40px
           
           .readymade-choice-label
             width: 0
             overflow: hidden
             font-size: .6em
             min-height: 35px
-            margin-left: -20px
+            padding: 2px
           
           input:checked + .readymade-choice-clickable
             background: #eee
