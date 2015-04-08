@@ -10,6 +10,8 @@
 
 **Merged pull requests:**
 
+- Orchid types [\#10](https://github.com/zooniverse/Orchids/pull/10) ([eatyourgreens](https://github.com/eatyourgreens))
+
 - SVG crop and zoom [\#9](https://github.com/zooniverse/Orchids/pull/9) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Herbarium tasks [\#7](https://github.com/zooniverse/Orchids/pull/7) ([eatyourgreens](https://github.com/eatyourgreens))
