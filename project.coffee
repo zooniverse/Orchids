@@ -7,9 +7,9 @@ module.exports =
   subjectGroup: false
 
   title: 'Orchid Observers'
-  summary: 'hello world'
+  summary: 'Is climate change affecting the UK’s orchids?'
   description: '''
-    short project description goes here.
+    Photograph wild orchids this summer and annotate museum specimens to contribute to climate change research at the Natural History Museum. Gathering new photographs of UK orchids and extracting data on flowering times from over 10,000 Museum specimens is a huge task, so we need your help. Get involved here!
                  '''
   
 
