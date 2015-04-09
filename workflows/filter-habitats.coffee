@@ -5,8 +5,8 @@ module.exports =
     value: "deciduous"
     label: "Deciduous woodland"
   },{
-    value: "coniforous"
-    label: "Coniforous woodland"
+    value: "coniferous"
+    label: "Coniferous woodland"
   },{
     value: "grassland"
     label: "Grassland"
