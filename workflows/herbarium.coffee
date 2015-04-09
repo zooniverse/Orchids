@@ -11,12 +11,12 @@ module.exports =
   label: 'Herbarium'
   subjectGroup: '5523e3577b9f994c14000001'
   firstTask: 'barcode'
-  examples: require '../content/examples'
-  tutorialSteps: require '../content/tutorial-steps'
+  examples: require '../content/herbarium-examples'
+  tutorialSteps: require '../content/herbarium-tutorial'
   tasks:
     barcode:
       type: 'drawing'
-      question: 'Find the barcode and handwritten label for this specimen'
+      question: 'Please select the barcode that matches the specimen number above and draw a rectangle around the handwritten label for this barcode.'
       choices: [{
         type: SingleMagnifierPoint
         label: 'Barcode'
@@ -32,7 +32,7 @@ module.exports =
       next: 'verify'
     verify:
       type: 'text'
-      question: 'Verify the written specimen label'
+      question: 'Do the date and locality match the writing on the label? If not, then please enter the correct information.'
       defaults: {}
       choices: [{
         label: 'Species'
@@ -46,30 +46,22 @@ module.exports =
         label: 'Locality'
         key: 'locality'
         value: ''
-      },{
-        label: 'Label comments'
-        key: 'comments'
-        value: ''
       }]
       next: 'vc'
     vc:
       type: 'text'
-      question: 'There may be a VC number and registration label also on the sheet.'
+      question: 'If there is a Vice County (VC) number marked in pencil on the sheet, please check that it has been entered correctly.'
       defaults: {}
       choices: [{
-        label: 'Vice-county'
+        label: 'Vice County number (between 1 and 112)'
         key: 'vc'
         value: ''
         length: 3
-      },{
-        label: 'Registration'
-        key: 'registration'
-        value: ''
       }]
       next: 'flowering'
     flowering:
       type: 'drawing'
-      question: 'Identify the flowering stage of this specimen.'
+      question: 'Finally, please select one of the specimens and estimate its flowering stage. If there is more than one barcode on the sheet, select a specimen close to the barcode that you marked.'
       next: 'marking'
       confirmButtonLabel: 'Finish'
       choices: [{
