@@ -10,6 +10,8 @@
 
 **Merged pull requests:**
 
+- Add scientific names for each field example [\#11](https://github.com/zooniverse/Orchids/pull/11) ([eatyourgreens](https://github.com/eatyourgreens))
+
 - Orchid types [\#10](https://github.com/zooniverse/Orchids/pull/10) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - SVG crop and zoom [\#9](https://github.com/zooniverse/Orchids/pull/9) ([eatyourgreens](https://github.com/eatyourgreens))
