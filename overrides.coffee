@@ -62,6 +62,7 @@ for page in currentProject.classifyPages
       if tool.constructor.count > 1
         tool.deselect()
         tool.destroy()
+        @selection = null
     
       {label} = decisionTree.currentTask.getChoice() ? ''
       legend = tool.controls?.el.querySelector 'legend'
