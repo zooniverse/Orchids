@@ -11,8 +11,8 @@ module.exports =
   subjectGroup: 'field'
   label: 'Field photos'
   firstTask: 'species'
-  examples: require '../content/examples'
-  tutorialSteps: require '../content/tutorial-steps'
+  examples: require '../content/field-examples'
+  tutorialSteps: require '../content/field-tutorial'
   tasks: 
     species:
       type: OrchidFilterTask.type

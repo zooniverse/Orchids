@@ -10,8 +10,8 @@ module.exports =
   label: 'Herbarium'
   subjectGroup: '5523e3577b9f994c14000001'
   firstTask: 'barcode'
-  examples: require '../content/examples'
-  tutorialSteps: require '../content/tutorial-steps'
+  examples: require '../content/herbarium-examples'
+  tutorialSteps: require '../content/herbarium-tutorial'
   tasks:
     barcode:
       type: 'drawing'
