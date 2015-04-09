@@ -7,12 +7,13 @@ class OrchidType extends Controller
   template: (context) ->
     "
       <img src='#{context.orchid?.image.replace '/thumb', '/full'}' alt=''>
-      <p>#{context.orchid?.label}</p>
+      <p>#{context.orchid?.label}<br>(<span class='scientific-name'>#{context.orchid?.scientific}</span>)</p>
     "
   
   orchid:
     image: ''
     label: ''
+    scientific: ''
   
   constructor: ->
     super
