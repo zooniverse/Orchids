@@ -49,6 +49,8 @@ field_page = currentProject.classifyPages[1]
   
 herbarium_species = herbarium_page.decisionTree.el.querySelector('input[name=species]')
 
+currentProject.homePage.querySelector( '.readymade-footer' ).insertAdjacentHTML 'beforeEnd', '<a href="#/upload" class="readymade-call-to-action">Upload photos</a>'
+
 for page in currentProject.classifyPages
   do (page) ->
     {decisionTree, subjectViewer} = page
