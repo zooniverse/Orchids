@@ -3,6 +3,7 @@ Pinpoint = require '../drawing-tools/pinpoint'
 FreeDraw = require '../drawing-tools/free-draw-tool'
 TextTask = require '../tasks/text'
 TextareaTask = require '../tasks/textarea'
+MagnifierPoint = require '../drawing-tools/magnifier-point'
 SingleMagnifierPoint = require '../drawing-tools/single-magnifier-point'
 
 module.exports =
@@ -72,7 +73,7 @@ module.exports =
       next: 'marking'
       confirmButtonLabel: 'Finish'
       choices: [{
-        type: Pinpoint
+        type: MagnifierPoint
         label: 'Flowering stage'
         value: 'flowering'
         details: [{
@@ -87,6 +88,9 @@ module.exports =
           },{
             label: 'flowering over/in fruit/seed'
             value: 'over'
+          },{
+            label: 'I don\'t know'
+            value: 'dont-know'
           }]
         }]
       }]
