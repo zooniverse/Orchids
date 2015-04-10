@@ -89,20 +89,31 @@ for page in currentProject.classifyPages
       
       if page.workflow is 'herbarium'
         page.decisionTree.tasks.verify.setDefaults
-          species: metadata.scientific_name
-          date: metadata.collection_date_from
-          locality: metadata.locality_string
-          comments: metadata.label_comments
+          species: metadata.scientific_name ? ''
+          date: metadata.collection_date_from ? ''
+          locality: metadata.locality_string ? ''
+          comments: metadata.label_comments ? ''
         
         page.decisionTree.tasks.vc.setDefaults
-          vc: metadata.vc_number
-          registration: metadata.registration
+          vc: metadata.vc_number ? ''
+          registration: metadata.registration ? ''
           
         # disable the herbarium species if NHM already know it.
-        herbarium_species.disabled = !!metadata.scientific_name.length
+        herbarium_species.disabled = !!herbarium_species.value.length
       
       if page.workflow is 'field'
         page.decisionTree.tasks.species.clearFilters()
+    
+groups = require './workflows/groups'
+# start with 10 subjects from batch 1
+herbarium_page.Subject.queueMax = 10
+herbarium_page.Subject.group = groups.batch1
+# the alternate between batch 1 and batch 2
+herbarium_page.Subject.on 'fetch', (e, subjects) ->
+  if herbarium_page.Subject.group == groups.batch1 
+    herbarium_page.Subject.group = groups.batch2 
+  else 
+    herbarium_page.Subject.group = groups.batch1
       
 
 subject_metadata = new SubjectMetadata

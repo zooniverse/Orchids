@@ -6,10 +6,12 @@ TextareaTask = require '../tasks/textarea'
 MagnifierPoint = require '../drawing-tools/magnifier-point'
 SingleMagnifierPoint = require '../drawing-tools/single-magnifier-point'
 
+groups = require './groups'
+
 module.exports =
   key: 'herbarium'
   label: 'Herbarium'
-  subjectGroup: '5523e3577b9f994c14000001'
+  subjectGroup: groups.batch1
   firstTask: 'barcode'
   examples: require '../content/herbarium-examples'
   tutorialSteps: require '../content/herbarium-tutorial'
