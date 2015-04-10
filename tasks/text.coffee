@@ -17,6 +17,7 @@ class TextTask extends DecisionTree.Task
         value='#{choice.value}'
         data-choice-index='#{i}'
         #{ if choice.length then "size=" + choice.length else ""}
+        #{ if choice.placeholder then "placeholder='#{choice.placeholder}'" else ""}
         #{ if choice.disabled then "disabled" else ""}
       />
   </label>

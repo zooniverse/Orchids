@@ -41,9 +41,11 @@ module.exports =
         key: 'species'
         value: ''
       },{
-        label: 'Date'
+        label: 'Date (day/month/year)'
         key: 'date'
         value: ''
+        placeholder: 'eg. 15/11/1884'
+        length: 11
       },{
         label: 'Locality'
         key: 'locality'
