@@ -103,6 +103,17 @@ for page in currentProject.classifyPages
       
       if page.workflow is 'field'
         page.decisionTree.tasks.species.clearFilters()
+    
+groups = require './workflows/groups'
+# start with 10 subjects from batch 1
+herbarium_page.Subject.queueMax = 10
+herbarium_page.Subject.group = groups.batch1
+# the alternate between batch 1 and batch 2
+herbarium_page.Subject.on 'fetch', (e, subjects) ->
+  if herbarium_page.Subject.group == groups.batch1 
+    herbarium_page.Subject.group = groups.batch2 
+  else 
+    herbarium_page.Subject.group = groups.batch1
       
 
 subject_metadata = new SubjectMetadata

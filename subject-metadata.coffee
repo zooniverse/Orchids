@@ -1,11 +1,15 @@
 Controller = require 'zooniverse/controllers/base-controller'
 Api = require 'zooniverse/lib/api'
+groups = require './workflows/groups'
 
 class SubjectMetadata extends Controller
   
   template: (context) ->
     "
-      <p class='subject-metadata'><b>Specimen number:</b> #{context.metadata?.specimen_number}</p>
+      <p class='subject-metadata'>
+        <b>Specimen number:</b> #{context.metadata?.specimen_number}
+        <b>Status:</b> #{context.status}
+      </p>
     "
   
   metadata:
@@ -23,6 +27,8 @@ class SubjectMetadata extends Controller
     
       @listenTo classify_page.Subject, 'select', (e, subject) =>
         @metadata = subject.metadata
+        
+        @status = if subject.group_id == groups.batch1 then 'Needs checking' else 'Needs transcribing'
         @el.html @template @
   
   listenTo: (thing, eventName, handler) ->
