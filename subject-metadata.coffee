@@ -8,8 +8,8 @@ class SubjectMetadata extends Controller
     "
       <p class='subject-metadata'>
         <b>Specimen number:</b> #{context.metadata?.specimen_number}
-        <b>Status:</b> #{context.status}
       </p>
+      <p><b>Status:</b> #{context.status}</p>
     "
   
   metadata:
@@ -28,7 +28,7 @@ class SubjectMetadata extends Controller
       @listenTo classify_page.Subject, 'select', (e, subject) =>
         @metadata = subject.metadata
         
-        @status = if subject.group_id == groups.batch1 then 'Needs checking' else 'Needs transcribing'
+        @status = if subject.group_id == groups.batch1 then 'Requires checking' else 'Requires transcribing'
         @el.html @template @
   
   listenTo: (thing, eventName, handler) ->
