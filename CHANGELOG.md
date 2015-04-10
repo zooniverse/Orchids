@@ -10,6 +10,10 @@
 
 **Merged pull requests:**
 
+- Alternate herbarium workflow between subjects from batch 1 and batch 2 [\#13](https://github.com/zooniverse/Orchids/pull/13) ([eatyourgreens](https://github.com/eatyourgreens))
+
+- Tutorials [\#12](https://github.com/zooniverse/Orchids/pull/12) ([eatyourgreens](https://github.com/eatyourgreens))
+
 - Add scientific names for each field example [\#11](https://github.com/zooniverse/Orchids/pull/11) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Orchid types [\#10](https://github.com/zooniverse/Orchids/pull/10) ([eatyourgreens](https://github.com/eatyourgreens))
