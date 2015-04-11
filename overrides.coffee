@@ -88,8 +88,9 @@ for page in currentProject.classifyPages
       {metadata} = subject
       
       if page.workflow is 'herbarium'
+        scientific_name = metadata.scientific_name ? ''
         page.decisionTree.tasks.verify.setDefaults
-          species: metadata.scientific_name ? ''
+          species: scientific_name
           date: metadata.collection_date_from ? ''
           locality: metadata.locality_string ? ''
           comments: metadata.label_comments ? ''
@@ -99,7 +100,7 @@ for page in currentProject.classifyPages
           registration: metadata.registration ? ''
           
         # disable the herbarium species if NHM already know it.
-        herbarium_species.disabled = !!herbarium_species.value.length
+        herbarium_species.disabled = !!scientific_name.length
       
       if page.workflow is 'field'
         page.decisionTree.tasks.species.clearFilters()
