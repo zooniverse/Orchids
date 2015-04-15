@@ -10,6 +10,8 @@
 
 **Merged pull requests:**
 
+- Field guide screenshots and examples [\#14](https://github.com/zooniverse/Orchids/pull/14) ([eatyourgreens](https://github.com/eatyourgreens))
+
 - Alternate herbarium workflow between subjects from batch 1 and batch 2 [\#13](https://github.com/zooniverse/Orchids/pull/13) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Tutorials [\#12](https://github.com/zooniverse/Orchids/pull/12) ([eatyourgreens](https://github.com/eatyourgreens))
