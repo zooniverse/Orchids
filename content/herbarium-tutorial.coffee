@@ -1,24 +1,30 @@
 module.exports = [{
-  image: 'tutorial/step1.jpg'
-  alt: 'This will be a tutorial step'
+  image: 'examples/barcode.jpg'
+  alt: 'Screenshot of the barcode magnifier tool.'
   content: '''
-    Find the barcode and written label for this specimen.
+    Find the barcode and mark it for this specimen.
   '''
   },{
-  image: 'tutorial/step2.jpg'
-  alt: 'This will be a tutorial step'
+  image: 'examples/label1.jpg'
+  alt: 'Screenshot of the label marking tool.'
   content: '''
-    Check the date, locality information and any comments from the label.
+    Click 'specimen label' and draw a rectangle around the handwritten label associated with this barcode.
   '''
   },{
-  image: 'tutorial/step2.jpg'
-  alt: 'This will be a tutorial step'
+  image: 'examples/label2.jpg'
+  alt: 'Screenshot of the label transcription form.'
   content: '''
-    Many sheets have a Vice County (VC) number and registration label. Try to find these on the sheet and check them.
+    Check the date and locality information from the label.
   '''
   },{
-  image: 'tutorial/step2.jpg'
-  alt: 'This will be a tutorial step'
+  image: 'examples/vc.jpg'
+  alt: 'Screenshot showing a VC number in faint pencil.'
+  content: '''
+    Many sheets have a Vice County (VC) number. Try to find this on the sheet and check it.
+  '''
+  },{
+  image: 'examples/herb-flowering.jpg'
+  alt: 'Screenshot shwoing the flowering stage options.'
   content: '''
     Finally, click on each plant to record the flowering stage: in bud, in flower or in seed.
   '''
