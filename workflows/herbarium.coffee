@@ -10,7 +10,7 @@ groups = require './groups'
 
 module.exports =
   key: 'herbarium'
-  label: 'Herbarium'
+  label: 'Transcribe'
   subjectGroup: groups.batch1
   firstTask: 'barcode'
   examples: require '../content/herbarium-examples'
@@ -18,16 +18,16 @@ module.exports =
   tasks:
     barcode:
       type: 'drawing'
-      question: 'Please select the barcode that matches the specimen number above and draw a rectangle around the handwritten label for this barcode.'
+      question: 'Please select the barcode that matches the specimen number above. Then draw a rectangle around the handwritten label that the barcode relates to.'
       choices: [{
         type: SingleMagnifierPoint
-        label: 'Barcode'
+        label: 'Select barcode'
         value: 'barcode'
         color: '#660066'
         checked: true
       },{
         type: Rectangle
-        label: 'Specimen label'
+        label: 'Select specimen label'
         value: 'specimen-label'
         color: '#006666'
       }]
@@ -41,11 +41,11 @@ module.exports =
         key: 'species'
         value: ''
       },{
-        label: 'Date (day/month/year)'
+        label: 'Date (dd/mm/yyyy)'
         key: 'date'
         value: ''
         placeholder: 'eg. 15/11/1884'
-        length: 11
+        length: 15
       },{
         label: 'Locality'
         key: 'locality'
@@ -65,7 +65,7 @@ module.exports =
       next: 'flowering'
     flowering:
       type: 'drawing'
-      question: 'Finally, please select one of the specimens and estimate its flowering stage. If there is more than one barcode on the sheet, select a specimen close to the barcode that you marked.'
+      question: 'Finally, please click on one of the specimens and estimate its flowering stage. If there is more than one barcode on the sheet, select a specimen close to the barcode that you marked.'
       next: 'marking'
       confirmButtonLabel: 'Finish'
       choices: [{
@@ -82,7 +82,7 @@ module.exports =
             label: 'mainly in flower'
             value: 'flower'
           },{
-            label: 'flowering over/in fruit/seed'
+            label: 'flowering over/seed capsules'
             value: 'over'
           },{
             label: 'I don\'t know'

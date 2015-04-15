@@ -9,14 +9,14 @@ MagnifierPoint = require '../drawing-tools/magnifier-point'
 module.exports =
   key: 'field'
   subjectGroup: 'field'
-  label: 'Field photos'
+  label: 'Identify'
   firstTask: 'species'
   examples: require '../content/field-examples'
   tutorialSteps: require '../content/field-tutorial'
   tasks: 
     species:
       type: OrchidFilterTask.type
-      question: 'Pick a photo to identify the type of orchid'
+      question: 'Select from the key below to identify the orchid.'
       filters: [
         require './filter-colours'
         require './filter-habitats'
@@ -25,11 +25,11 @@ module.exports =
       next: 'marking'
     marking:
       type: 'drawing'
-      question: 'Help us by labelling the flowering stage of each flower. Click on any insects in the photo and tell us what they are.'
+      question: 'Click on each orchid and select the flowering stage. If there are any insects on the orchid(s), click on them and tell us what they are.'
       confirmButtonLabel: 'Finish'
       choices: [{
           type: Pinpoint
-          label: 'Flowering stage'
+          label: 'Label flowering stage'
           value: 'flowering'
           checked: true
           details: [{
@@ -42,13 +42,13 @@ module.exports =
               label: 'mainly in flower'
               value: 'flower'
             },{
-              label: 'flowering over/in fruit/seed'
+              label: 'flowering over/seed capsules'
               value: 'over'
             }]
           }]
         },{
         type: MagnifierPoint
-        label: 'Insects'
+        label: 'Select insects'
         value: 'insects'
         details: [{
           type: 'textarea'
@@ -56,7 +56,7 @@ module.exports =
           choices:[{
             value: ''
             key: 'comments'
-            label: 'What insects can you see?'
+            label: 'What is the name of this insect? Give as much detail as you can.'
           }]
         }]
       }]
