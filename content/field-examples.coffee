@@ -12,11 +12,10 @@ module.exports = [{
   },{
     label: "Flowering stage"
     content: '''
-                  
+                  Select ‘flowering stage’, click on the flower spike and label the flowering stage of the orchid in the photograph. There are 3 options:
                  '''
     figures: [{
       label: '''
-                   <p>Select ‘flowering stage’, click on the flower spike and label the flowering stage of the orchid in the photograph. There are 3 options:</p>
                    <dl>
                                     <dt>Mainly in bud</dt>
                                     <dd>choose this if the spike is 50% or more in bud.</dd>
@@ -33,10 +32,11 @@ module.exports = [{
   },{
     label: "Insects"
     content: '''
+                Do you see any insects on the flower?
                  '''
     figures: [{
       label: '''
-                   Do you see any insects you see in the photograph? Tag the insect by clicking on it – a text box window appears where you can add your insect species identification (if known). You can use the common or scientific name e.g. <cite>‘Buff-tailed bumblebee’</cite> or <cite>Bombus terrestris</cite>.
+                  Tag the insect by clicking on it – a text box window appears where you can add your insect species identification (if known). You can use the common or scientific name e.g. <cite>‘Buff-tailed bumblebee’</cite> or <cite>Bombus terrestris</cite>.
                    '''
       
       image: "examples/insects.jpg"
