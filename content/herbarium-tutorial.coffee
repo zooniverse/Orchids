@@ -26,6 +26,6 @@ module.exports = [{
   image: 'examples/herb-flowering.jpg'
   alt: 'Screenshot shwoing the flowering stage options.'
   content: '''
-    Finally, click on each plant to record the flowering stage: in bud, in flower or in seed.
+    Finally, click on each plant to record the flowering stage: in bud, in flower or in seed. Many other people will also transcribe this sheet, so don't worry if you can't complete all the tasks. Use the Help (<span class="fa fa-question"></span>) button to see more detailed examples.
   '''
   }]
