@@ -5,7 +5,7 @@ module.exports = [{
     Find the barcode and mark it for this specimen.
   '''
   },{
-  image: 'examples/label1.jpg'
+  image: 'examples/label1x.jpg'
   alt: 'Screenshot of the label marking tool.'
   content: '''
     Click 'specimen label' and draw a rectangle around the handwritten label associated with this barcode.
@@ -17,7 +17,7 @@ module.exports = [{
     Check the date and locality information from the label.
   '''
   },{
-  image: 'examples/vc.jpg'
+  image: 'examples/vcx.jpg'
   alt: 'Screenshot showing a VC number in faint pencil.'
   content: '''
     Many sheets have a Vice County (VC) number. Try to find this on the sheet and check it.

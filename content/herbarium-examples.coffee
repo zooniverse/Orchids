@@ -22,7 +22,7 @@ module.exports = [{
                    There may be more than one label per specimen on the sheet. Choose the correct label as shown here, giving the species name, date and location. This is usually in the bottom right hand corner of the herbarium sheet. Where there are multiple collections from different locations mounted on the same sheet, the barcode associated to the correct specimen will normally be positioned nearest to it.  Click and drag to draw a rectangle around the label.
                    '''
       
-      image: "examples/label1.jpg"
+      image: "examples/label1x.jpg"
       alt: "Herbarium sheet with the label highlighted."
     },{
       label: '''
@@ -46,7 +46,7 @@ module.exports = [{
                  '''
     figures: [{
       label: ''
-      image: "examples/vc.jpg"
+      image: "examples/vcx.jpg"
       alt: "Example of a vice county number."
     }]
   },{
