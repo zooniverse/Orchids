@@ -11,29 +11,30 @@ module.exports = [{
       
       image: "examples/barcode.jpg"
       alt: "Herbarium sheet with the barcode highlighted."
-    }]
-  },{
-    label: "Specimen label"
-    content: '''
-                  Select the label. 
-                 '''
-    figures: [{
+    },{
       label: '''
                    There may be more than one label per specimen on the sheet. Choose the correct label as shown here, giving the species name, date and location. This is usually in the bottom right hand corner of the herbarium sheet. Where there are multiple collections from different locations mounted on the same sheet, the barcode associated to the correct specimen will normally be positioned nearest to it.  Click and drag to draw a rectangle around the label.
                    '''
       
       image: "examples/label1x.jpg"
       alt: "Herbarium sheet with the label highlighted."
-    },{
+    }]
+  },{
+    label: "Specimen label"
+    content: '''
+                  Check and transcribe the label. 
+                 '''
+    figures: [{
       label: '''
-                   <p>Check and transcribe the label.</p>
-                   <p>If no species name appears in the species field, please transcribe the species name verbatim as it appears on the label.
-                   <strong>Please note:</strong> Historical herbarium sheet labels often record a former name or names for a specimen which differ from the currently accepted name.</p>
-
-                   <p>Check that the date matches the label, if no date appears in the date field please enter the date in the format <strong>dd/mm/yyyy</strong>.  If more than one date appears on the label (or any other label on the sheet) we only want the specimen collection date recorded (other dates may refer to when the specimen was acquired by a herbarium, or when the specimen was determined or re-determined at a later date).</p>
-                   
-                   <p>Check that the location matches the label. Correct it if necessary, or enter it if it has not been transcribed already.</p>
-                    
+        <dl>
+          <dt>Species</dt>
+          <dd>If no species name appears in the species field, please transcribe the species name verbatim as it appears on the label.
+          <strong>Please note:</strong> Historical herbarium sheet labels often record a former name or names for a specimen which differ from the currently accepted name.</dd>
+          <dt>Date</dt>
+          <dd>Check that the date matches the label, if no date appears in the date field please enter the date in the format <strong>dd/mm/yyyy</strong>.  If more than one date appears on the label (or any other label on the sheet) we only want the specimen collection date recorded (other dates may refer to when the specimen was acquired by a herbarium, or when the specimen was determined or re-determined at a later date).</dd>
+          <dt>Locality</dt>
+          <dd>Check that the location matches the label. Correct it if necessary, or enter it if it has not been transcribed already.</dd>
+        </dl>
                    '''
       
       image: "examples/label2.jpg"

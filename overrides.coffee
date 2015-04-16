@@ -14,6 +14,7 @@ DecisionTree = require 'zooniverse-decision-tree'
   
 ClassifyPage::showPageHelp = () ->
   @fieldGuideContainer.attr 'aria-hidden', !@help.checked
+  @fieldGuide.goTo @subjectViewer.taskIndex
 
 SubjectViewer::template = require './templates/subject-viewer'
 SiteHeader::template = require './templates/site-header'
