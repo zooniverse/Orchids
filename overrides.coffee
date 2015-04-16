@@ -1,6 +1,8 @@
 MAX_PAGE_WIDTH = 600
 
 require './readymade/overrides.coffee'
+Dialog = require 'zooniverse/controllers/dialog'
+User = require 'zooniverse/models/user'
 SubjectMetadata = require './subject-metadata'
 OrchidType = require './orchid-type'
 SubjectViewer = require 'zooniverse-readymade/lib/subject-viewer'
@@ -115,6 +117,29 @@ herbarium_page.Subject.on 'fetch', (e, subjects) ->
     herbarium_page.Subject.group = groups.batch2 
   else 
     herbarium_page.Subject.group = groups.batch1
+
+herbarium_page.on herbarium_page.LOAD_SUBJECT, (e, subject) ->
+  is_transcriber = User.current?.preferences?[currentProject.id]?.transcriber || herbarium_page.transcriber
+  transcribeAlert() if subject.group_id == groups.batch2 unless is_transcriber
+
+transcribeAlert = ->
+  prompt = new Dialog
+    warning: true
+
+    content: """
+      <header>You are ready to do some transcribing!</header>
+      <p>Now that you've checked #{herbarium_page.Subject.queueMax} Herbarium sheets, you'll start to see some sheets which are marked <strong>Status:</strong> needs transcribing.</p>
+      <p>Please copy the species, date and any locality information from the label for these sheets. Add the Vice County number if one is present.</p>
+      <p class="action">
+        <button name="close-dialog">OK</button>
+      </p>
+    """
+
+  prompt.show()
+  User.current?.setPreference 'transcriber', true
+  herbarium_page.transcriber = true
+  setTimeout ->
+    prompt.el[0].querySelector('button').focus()
       
 
 subject_metadata = new SubjectMetadata
