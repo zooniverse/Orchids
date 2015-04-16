@@ -10,6 +10,8 @@
 
 **Merged pull requests:**
 
+- Team page and science justification [\#16](https://github.com/zooniverse/Orchids/pull/16) ([eatyourgreens](https://github.com/eatyourgreens))
+
 - Alert users when first switching from checking to transcribing records [\#15](https://github.com/zooniverse/Orchids/pull/15) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Field guide screenshots and examples [\#14](https://github.com/zooniverse/Orchids/pull/14) ([eatyourgreens](https://github.com/eatyourgreens))
