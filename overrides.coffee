@@ -119,7 +119,8 @@ herbarium_page.Subject.on 'fetch', (e, subjects) ->
     herbarium_page.Subject.group = groups.batch1
 
 herbarium_page.on herbarium_page.LOAD_SUBJECT, (e, subject) ->
-  transcribeAlert() if subject.group_id == groups.batch2 unless User.current?.preferences?[currentProject.id]?.transcriber
+  is_transcriber = User.current?.preferences?[currentProject.id]?.transcriber || herbarium_page.transcriber
+  transcribeAlert() if subject.group_id == groups.batch2 unless is_transcriber
 
 transcribeAlert = ->
   prompt = new Dialog
@@ -136,6 +137,7 @@ transcribeAlert = ->
 
   prompt.show()
   User.current?.setPreference 'transcriber', true
+  herbarium_page.transcriber = true
   setTimeout ->
     prompt.el[0].querySelector('button').focus()
       
