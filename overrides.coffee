@@ -106,6 +106,13 @@ for page in currentProject.classifyPages
       
       if page.workflow is 'field'
         page.decisionTree.tasks.species.clearFilters()
+        page.decisionTree.tasks.species.confirmButton.disabled = true
+
+field_page.el.on field_page.decisionTree.CHANGE, ({originalEvent: {detail}}) ->
+  {key, value} = detail
+  
+  if key is 'species'
+    field_page.decisionTree.tasks.species.confirmButton.disabled = false if value
     
 groups = require './workflows/groups'
 # start with 10 subjects from batch 1
