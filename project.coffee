@@ -23,7 +23,7 @@ module.exports =
     },{
     'Science': [
       {
-        'Orchid Observers': require './content/science'
+        'The Science': require './content/science'
       },{
         'The Team': team_page team
       }]

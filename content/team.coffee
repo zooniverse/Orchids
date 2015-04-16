@@ -4,7 +4,7 @@ module.exports =
     members: [{
       image: 'team123/nhm.png'
       name: 'Natural History Museum'
-      description: 'Founded in 1859, the Missouri Botanical Garden is the United States’ oldest botanical garden in continuous operation and a National Historic Landmark located in St. Louis, MO. The Garden is a center for botanical research and science education, and has served as the technical development team for the Biodiversity Heritage Library since 2007.'
+      description: 'TODO'
       url: ['http://nhm.ac.uk', 'https://twitter.com/NHM_London']
     },{
       image: 'team123/conscicom.jpg'
@@ -22,23 +22,23 @@ module.exports =
     title: "Scientists" 
     members: [{
       name: 'Kath Castillo'
-      location: 'London, UK'
+      location: 'Natural History Museu, London'
       description: '''
-                         Though a humanities scholar and librarian by training, was hired by the Biodiversity Heritage Library over 5 years ago to serve as their metadata guru. Now manages several BHL-related projects including Art of Life and Purposeful Gaming and is based in the Center for Biodiversity Informatics at Missouri Botanical Garden.
+                         TODO
                          '''
       
     },{
       name: 'Mark Spencer'
-      location: 'London, UK'
+      location: 'Natural History Museu, London'
       description: '''
-                         A kind (of) Computer Scientist, father of one, who got into Biodiversity Informatics 15 years ago and then flew from Costa Rica to work for global Biodiversity Heritage Library based in the Center for Biodiversity Informatics at Missouri Botanical Garden.
+                         TODO
                          '''
       
     },{
       name: 'John Tweddle'
-      location: 'London, UK'
+      location: 'Natural History Museu, London'
       description: '''
-                         Software developer with more than 20 years of experience who has been involved with the Biodiversity Heritage Library since 2007.
+                         Head of the Angela Marmont Centre for UK Biodiversity.
                          '''
       
     }]
