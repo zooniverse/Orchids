@@ -10,6 +10,8 @@
 
 **Merged pull requests:**
 
+- Orchid types - flower detail [\#17](https://github.com/zooniverse/Orchids/pull/17) ([eatyourgreens](https://github.com/eatyourgreens))
+
 - Team page and science justification [\#16](https://github.com/zooniverse/Orchids/pull/16) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Alert users when first switching from checking to transcribing records [\#15](https://github.com/zooniverse/Orchids/pull/15) ([eatyourgreens](https://github.com/eatyourgreens))
