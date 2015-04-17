@@ -30,8 +30,7 @@ module.exports =
   }]
   
   externalLinks:
-    Talk: ''
-    Blog: ''
+    Feedback: 'https://docs.google.com/forms/d/1R1g1T8CQY3eAQaOWZMf3xTm7H7EhIfg10jVwdSSctpA/viewform'
   
   workflows: [
     require './workflows/herbarium'
