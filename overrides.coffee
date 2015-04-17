@@ -81,7 +81,7 @@ for page in currentProject.classifyPages
         rectangle = tool.mark for tool in ms.tools when tool.mark.value is 'specimen-label'
         subjectViewer.crop rectangle
       else
-        image = ms.root.el.querySelector 'g.frames image'
+        image = ms.root.el.querySelectorAll('g.frames image')[subjectViewer.currentFrame]
         subjectViewer.maxWidth = parseInt image.getAttribute 'width'
         subjectViewer.maxHeight = parseInt image.getAttribute 'height'
         subjectViewer.rescale()
@@ -114,6 +114,17 @@ field_page.el.on field_page.decisionTree.CHANGE, ({originalEvent: {detail}}) ->
   
   if key is 'species'
     field_page.decisionTree.tasks.species.confirmButton.disabled = false if value
+
+    
+field_page.on field_page.CREATE_CLASSIFICATION, () ->
+  subject = field_page.classification.subject
+  return unless Array.isArray subject.location.standard
+  randomIndex = Math.floor Math.random() * subject.location.standard.length
+
+  field_page.classification.set 'image_index', randomIndex
+  field_page.classification.set 'image_src', subject.location.standard[randomIndex]
+    
+  subject.location.standard = subject.location.standard[randomIndex]
     
 groups = require './workflows/groups'
 # start with 10 subjects from batch 1

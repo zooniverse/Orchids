@@ -1,7 +1,8 @@
 MarkingSurface = require 'marking-surface'
 
-MarkingSurface::rescale = (x, y, width, height) ->
-  image = @root.el.querySelector 'g.frames image'
+MarkingSurface::rescale = (x, y, width, height, image) ->
+  images = @root.el.querySelectorAll 'g.frames image'
+  image = images[ images.length - 1 ]
   rect = image.getBoundingClientRect()
   return unless rect.width # rect.width will be 0 if the image is set to display: none
   
