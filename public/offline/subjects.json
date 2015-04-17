@@ -29,6 +29,12 @@
   "location": {"standard": "offline/BM000954651.jpg"},
   "metadata": {"specimen_id": "BM000954651", "species": "", "date": "", "county": "", "locality": "", "vc": "", "registration": "", "comments": ""}
 },{
+  "id": "ORC008",
+  "zooniverse_id": "APK0000007",
+  "group_id": "field",
+  "location": {"standard": ["offline/Burnt-tip Orchid - Aston Upthorpe 20070603 08.jpeg", "offline/Burnt orchidMW.JPG"]},
+  "metadata": {"specimen_id": "BM000954651", "species": "Burnt-tip Orchid"}
+},{
   "id": "ORC006",
   "zooniverse_id": "APK0000006",
   "group_id": "field",
@@ -40,12 +46,6 @@
   "group_id": "field",
   "location": {"standard": "offline/IMG_6503.jpg"},
   "metadata": {"specimen_id": "BM000954651", "species": ""}
-},{
-  "id": "ORC008",
-  "zooniverse_id": "APK0000007",
-  "group_id": "field",
-  "location": {"standard": "offline/Burnt-tip Orchid - Aston Upthorpe 20070603 08.jpeg"},
-  "metadata": {"specimen_id": "BM000954651", "species": "Burnt-tip Orchid"}
 },{
   "id": "ORC009",
   "zooniverse_id": "APK0000007",
