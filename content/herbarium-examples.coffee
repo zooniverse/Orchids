@@ -1,19 +1,19 @@
 module.exports = [{
     label: 'Barcode'
     content: '''
-                 Each herbarium specimen is labelled with a barcode number. This is the unique specimen identifier.
+                 Each herbarium sheet is labelled with a barcode number. The barcode number is the unique identifier for each collection event. A collection event comprises one or more plant specimens collected from the same location on the same date – it is these specimens that you can see on the herbarium sheet.
                  '''
     
     figures: [{
       label: '''
-                   Verify the specimen number. The Barcode is a unique specimen identifier and is usually located in the top left hand corner of the specimen sheet. For multiple collection records mounted on the same sheet, each will have a barcode identifying the specimen (the ‘collection event’).   Check that the specimen number matches the barcode nearest to the specimen. Use the magnifier tool to help you read the numbers on the barcode.
+                   Sometimes plant specimens from more than one collection event are mounted on the same herbarium sheet. When this happens there will be more than one barcode on the sheet. You will need to find the barcode that matches the barcode number we are asking you to look at. Use the magnifier tool to help you read the barcode.
                    '''
       
       image: "examples/barcode.jpg"
       alt: "Herbarium sheet with the barcode highlighted."
     },{
       label: '''
-                   There may be more than one label per specimen on the sheet. Choose the correct label as shown here, giving the species name, date and location. This is usually in the bottom right hand corner of the herbarium sheet. Where there are multiple collections from different locations mounted on the same sheet, the barcode associated to the correct specimen will normally be positioned nearest to it.  Click and drag to draw a rectangle around the label.
+                   There is often more than one label on the herbarium sheet. Choose the label that includes the species name, date and location. This is usually in the bottom right hand corner of the sheet. Click and drag to draw a rectangle around the label. If your herbarium sheet contains more than one barcode, select the label that corresponds to the correct barcode. It will be positioned near the plant specimen(s) that are closest to the correct barcode.
                    '''
       
       image: "examples/label1x.jpg"

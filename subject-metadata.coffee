@@ -7,7 +7,7 @@ class SubjectMetadata extends Controller
   template: (context) ->
     "
       <p class='subject-metadata'>
-        <b>Specimen number:</b> #{context.metadata?.specimen_number}
+        <b>Barcode number:</b> #{context.metadata?.specimen_number}
       </p>
       <p><b>Status:</b> #{context.status}</p>
     "
