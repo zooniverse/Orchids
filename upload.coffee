@@ -4,6 +4,8 @@ User = require 'zooniverse/models/user'
 
 class UploadForm extends Controller
   
+  className: 'readymade-generic-page'
+  
   template: (context) ->
     logged_in = """
         <h2>Upload photos</h2>
