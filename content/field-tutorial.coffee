@@ -8,7 +8,7 @@ module.exports = [{
   image: 'examples/field-flowering.jpg'
   alt: 'Screenshot of the flowering stage tool, showing the options.'
   content: '''
-    Click on each plant to mark the flowering stage. If there are lots of plants in the photo then…
+    Click on each plant to mark the flowering stage.
   '''
   },{
   image: 'examples/insects.jpg'
