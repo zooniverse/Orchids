@@ -53,7 +53,7 @@ module.exports = [{
   },{
     label: "Flowering stage"
     content: '''
-                 Estimate the flowering stage of the orchid specimen. Click on the specimen (if there are more than one plant specimen choose the specimen closest to the barcode) and choose from the list of options:
+                 Estimate the flowering stage of the orchid specimen.  This can be difficult to tell in herbarium specimens, but don’t worry as lots of other people will also look at this same specimen. Click on the specimen (if there are more than one plant specimen choose the specimen closest to the barcode) and choose from the list of options:
                  
                  '''
     figures: [{

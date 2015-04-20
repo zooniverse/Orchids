@@ -18,7 +18,7 @@ module.exports =
       'Upload': [{
         'Form': upload_form
       },{
-        'Resources': 'Links to resources for observers.'
+        'Resources': require './content/resources'
       }]
     },{
     'Science': [

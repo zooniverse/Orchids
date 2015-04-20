@@ -4,7 +4,10 @@ module.exports =
     members: [{
       image: 'team123/nhm.png'
       name: 'Natural History Museum'
-      description: 'TODO'
+      description: '''
+                         The Natural History Museum welcomes more than five million visitors a year and is a world-leading science research centre. Through its unique collection and unrivalled expertise it is tackling the biggest challenges facing the world today. It helps enable food security, eradicate disease and manage resource scarcity. It is studying the diversity of life and the delicate balance of ecosystems to ensure the survival of our planet.
+                         '''
+      
       url: ['http://nhm.ac.uk', 'https://twitter.com/NHM_London']
     },{
       image: 'team123/conscicom.jpg'
@@ -22,25 +25,31 @@ module.exports =
     title: "Scientists" 
     members: [{
       name: 'Kath Castillo'
-      location: 'Natural History Museu, London'
+      location: 'Natural History Museum, London'
       description: '''
                          TODO
                          '''
       
     },{
       name: 'Mark Spencer'
-      location: 'Natural History Museu, London'
+      location: 'Natural History Museum, London'
       description: '''
                          TODO
                          '''
       
     },{
       name: 'John Tweddle'
-      location: 'Natural History Museu, London'
+      location: 'Natural History Museum, London'
       description: '''
-                         Head of the Angela Marmont Centre for UK Biodiversity.
+                         I am Head of the Museum’s Angela Marmont Centre for UK Biodiversity, a collaborative centre that aims to promote the appreciation and study of UK natural history and to inspire and support naturalists of all backgrounds and abilities. In my free time I am a volunteer wildlife recorder and citizen science enthusiast.
                          '''
       
+    },{
+      name: 'Mike Waller'
+      location: 'NAtural History Museum, London'
+      description: '''
+                         A nature fanatic with a specific interest in terrestrial orchids and global biogeography. I’m now two months into a one year traineeship being run at the Angela Marmont Centre for UK Biodiversity at the Natural History Museum learning how to curate and tackle some of the UK’s more cryptic wildlife groups.
+                         '''
     }]
 
   developers: 

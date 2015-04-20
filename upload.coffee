@@ -6,11 +6,13 @@ class UploadForm extends Controller
   
   template: (context) ->
     logged_in = """
-        <h2>Upload</h2>
+        <h2>Upload photos</h2>
+        <p>Upload photos of UK orchids that you have found during the 2015 field season here. See the resources section to view field recording instructions and find out more about the 29 orchid species that we are asking you to find. You can also learn why we are asking you to tell us your name and sign-in to Zooniverse, along with how your images and observation data will be managed.</p>
         <iframe name=upload title="Upload photos to the Biodiversity Research Centre" seamless src='http://www.brc.ac.uk/iframe-host/zooniverse/enter-orchid-record?external=t&email=#{User.current?.email}&username=#{User.current?.name}'></iframe>
       """
     logged_out = """
-      <h2>Upload</h2>
+      <h2>Upload photos</h2>
+      <p>Upload photos of UK orchids that you have found during the 2015 field season here. See the resources section to view field recording instructions and find out more about the 29 orchid species that we are asking you to find. You can also learn why we are asking you to tell us your name and sign-in to Zooniverse, along with how your images and observation data will be managed.</p>
       <p>Please log in to upload photos.</p>
       """
     template = if User.current then logged_in else logged_out
