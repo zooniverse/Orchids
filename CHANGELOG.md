@@ -10,6 +10,8 @@
 
 **Merged pull requests:**
 
+- Select a random field photo when subject has multiple photos [\#18](https://github.com/zooniverse/Orchids/pull/18) ([eatyourgreens](https://github.com/eatyourgreens))
+
 - Orchid types - flower detail [\#17](https://github.com/zooniverse/Orchids/pull/17) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Team page and science justification [\#16](https://github.com/zooniverse/Orchids/pull/16) ([eatyourgreens](https://github.com/eatyourgreens))
