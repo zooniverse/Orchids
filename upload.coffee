@@ -14,7 +14,7 @@ class UploadForm extends Controller
       """
     logged_out = """
       <h2>Upload photos</h2>
-      <p>Upload photos of UK orchids that you have found during the 2015 field season here. See the resources section to view field recording instructions and find out more about the 29 orchid species that we are asking you to find. You can also learn why we are asking you to tell us your name and sign-in to Zooniverse, along with how your images and observation data will be managed.</p>
+      <p>Upload photos of UK orchids that you have found during the 2015 field season here. See the <a href="#/upload/resources">resources section</a> to view field recording instructions and find out more about the 29 orchid species that we are asking you to find. You can also learn why we are asking you to tell us your name and sign-in to Zooniverse, along with how your images and observation data will be managed.</p>
       <p>Please log in to upload photos.</p>
       """
     template = if User.current then logged_in else logged_out
