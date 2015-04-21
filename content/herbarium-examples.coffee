@@ -53,21 +53,21 @@ module.exports = [{
   },{
     label: "Flowering stage"
     content: '''
-                 Estimate the flowering stage of the orchid specimen.  This can be difficult to tell in herbarium specimens, but don’t worry as lots of other people will also look at this same specimen. Click on the specimen (if there are more than one plant specimen choose the specimen closest to the barcode) and choose from the list of options:
+                 The top part of the plant, that has flowers, is called the flowering spike. Estimate the flowering stage of the orchid specimen.  This can be difficult to tell in herbarium specimens, but don’t worry as lots of other people will also look at this same specimen. Click on the specimen (if there are more than one plant specimen choose the specimen closest to the barcode) and choose from the list of options:
                  
                  '''
     figures: [{
       label: '''
-                   <dl>
-                                    <dt>Mainly in bud</dt>
-                                    <dd>choose this if the spike has 50% or more flower buds than open flowers.</dd>
-                                    <dt>Mainly in flower</dt>
-                                    <dd>choose this if the spike has 50% or more open flowers.</dd>
-                                    <dt>Flowering over/seed capsules</dt> 
-                                    <dd>choose this if you see any seed capsules on the spike [illustration of orchid seed capsule?]</dd>
-                                    <dt>I don’t know</dt>
-                                    <dd>choose this if you cannot tell what the flowering stage is.</dd>
-                                    </dl>
+                  <dl>
+                    <dt>Mainly in bud</dt>
+                    <dd>choose this if the spike has 50% or more flower buds than open flowers.</dd>
+                    <dt>Mainly in flower</dt>
+                    <dd>choose this if the spike has 50% or more open flowers.</dd>
+                    <dt>Flowering over/seed capsules</dt> 
+                    <dd>choose this if you see any seed capsules on the spike [illustration of orchid seed capsule?]</dd>
+                    <dt>I don’t know</dt>
+                    <dd>choose this if you cannot tell what the flowering stage is.</dd>
+                  </dl>
                    '''
       
       image: "examples/herb-flowering.jpg"

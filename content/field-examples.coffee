@@ -12,18 +12,18 @@ module.exports = [{
   },{
     label: "Flowering stage"
     content: '''
-                  Select ‘flowering stage’, click on the flower spike and label the flowering stage of the orchid in the photograph. There are 3 options:
+                  The top part of the plant, that has flowers, is called the flowering spike. Select ‘flowering stage’, click on the flowering spike and label the flowering stage of the orchid in the photograph. There are 3 options:
                  '''
     figures: [{
       label: '''
-                   <dl>
-                                    <dt>Mainly in bud</dt>
-                                    <dd>choose this if the spike is 50% or more in bud.</dd>
-                                    <dt>Mainly in flower</dt>
-                                    <dd>choose this if the spike is 50% or more in flower.</dd>
-                                    <dt>Flowering over/seed capsules</dt> 
-                                    <dd>choose this if you see seed capsules on the spike</dd>
-                                    </dl>
+                 <dl>
+                  <dt>Mainly in bud</dt>
+                  <dd>choose this if more than half of the flowering spike is in bud.</dd>
+                  <dt>Mainly in flower</dt>
+                  <dd>choose this if more than half of the individual flowers on the flowering spike are open.</dd>
+                  <dt>Flowering over/seed capsules</dt> 
+                  <dd>choose this if you see seed capsules on the spike</dd>
+                </dl>
                    '''
       
       image: "examples/field-flowering.jpg"
