@@ -22,11 +22,10 @@ module.exports =
         require './filter-habitats'
       ]
       choices: require './orchid-types'
-      next: 'marking'
-    marking:
+      next: 'flowering'
+    flowering:
       type: 'drawing'
-      question: 'Click on each orchid and select the flowering stage. If there are any insects on the orchid(s), click on them and tell us what they are.'
-      confirmButtonLabel: 'Finish'
+      question: 'Click on each orchid and select the flowering stage.'
       choices: [{
           type: Pinpoint
           label: 'Label flowering stage'
@@ -46,7 +45,13 @@ module.exports =
               value: 'over'
             }]
           }]
-        },{
+        }]
+      next: 'insects'
+    insects:
+      type: 'drawing'
+      question: 'If there are any insects on the orchid(s), click on them and name them if you can.'
+      confirmButtonLabel: 'Finish'
+      choices: [{
         type: MagnifierPoint
         label: 'Select insects'
         value: 'insects'
@@ -56,7 +61,7 @@ module.exports =
           choices:[{
             value: ''
             key: 'comments'
-            label: 'What is the name of this insect? Give as much detail as you can.'
+            label: 'Name (if known).'
           }]
         }]
       }]
