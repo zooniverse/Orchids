@@ -36,7 +36,7 @@ module.exports = [{
                  '''
     figures: [{
       label: '''
-                  Tag the insect by clicking on it – a text box window appears where you can add your insect species identification (if known). You can use the common or scientific name e.g. <cite>‘Buff-tailed bumblebee’</cite> or <cite>Bombus terrestris</cite>.
+                  Tag insects by clicking on them – a text box window appears where you can add a name (if known). Don't worry if you can't identify the insects, we just want to know if an insect is present on the plant.
                    '''
       
       image: "examples/insects.jpg"
