@@ -8,7 +8,13 @@
 
 - Updated orchid types list [\#8](https://github.com/zooniverse/Orchids/issues/8)
 
+**Closed issues:**
+
+- Transcribing labels not working as of 10:16 20/4/15 [\#19](https://github.com/zooniverse/Orchids/issues/19)
+
 **Merged pull requests:**
+
+- Hack to add hidden labels to the zoo login form. [\#20](https://github.com/zooniverse/Orchids/pull/20) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Select a random field photo when subject has multiple photos [\#18](https://github.com/zooniverse/Orchids/pull/18) ([eatyourgreens](https://github.com/eatyourgreens))
 
