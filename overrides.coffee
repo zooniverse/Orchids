@@ -1,6 +1,10 @@
 MAX_PAGE_WIDTH = 600
 
 require './readymade/overrides.coffee'
+window.zooniverse ?= {}
+window.zooniverse.views ?= {}
+window.zooniverse.views.profile = require './templates/profile'
+
 Dialog = require 'zooniverse/controllers/dialog'
 User = require 'zooniverse/models/user'
 SubjectMetadata = require './subject-metadata'
