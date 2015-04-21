@@ -5,7 +5,7 @@ module.exports = [{
                  '''
     
     figures: [{
-      label: ''
+      label: '<a href="resources/OrchidObservers_IDGuide_FINAL.pdf">Download the idenitification guide (16.5MB PDF)</a>'
       image: "examples/species.jpg"
       alt: "Screenshot of the species identification tool."
     }]
