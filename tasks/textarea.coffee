@@ -14,8 +14,8 @@ class TextareaTask extends DecisionTree.Task
         name='#{choice.key}'
         value='#{choice.value}'
         data-choice-index='#{i}'
-        cols=27
-        rows=7
+        cols=15
+        rows=2
         #{if choice.placeholder? then "placeholder='#{choice.placeholder}'" else ''}
       ></textarea>
   </label>
