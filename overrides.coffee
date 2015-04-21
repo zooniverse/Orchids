@@ -119,6 +119,11 @@ field_page.el.on field_page.decisionTree.CHANGE, ({originalEvent: {detail}}) ->
   if key is 'species'
     field_page.decisionTree.tasks.species.confirmButton.disabled = false if value
 
+    label = field_page.decisionTree.currentTask.confirmButtonLabel
+    label = 'Finish' unless field_page.decisionTree.currentTask.getNext()
+
+    field_page.decisionTree.currentTask.confirmButton.innerHTML = label if label?
+
     
 field_page.on field_page.CREATE_CLASSIFICATION, () ->
   subject = field_page.classification.subject
