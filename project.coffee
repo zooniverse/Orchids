@@ -16,7 +16,7 @@ module.exports =
 
   pages: [{
       'Upload': [{
-        'Form': upload_form
+        'Upload photos': upload_form
       },{
         'Resources': require './content/resources'
       }]

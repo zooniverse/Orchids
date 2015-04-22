@@ -22,7 +22,7 @@ class UploadForm extends Controller
   
   constructor: ->
     super
-    @el.attr id: 'form'
+    @el.attr id: 'upload-photos'
     
     @listenTo User, 'change', (e, user) =>
       @el.html @template @
