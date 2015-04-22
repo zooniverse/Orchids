@@ -10,9 +10,19 @@
 
 **Closed issues:**
 
+- Set up talk.orchidobservers.org [\#21](https://github.com/zooniverse/Orchids/issues/21)
+
 - Transcribing labels not working as of 10:16 20/4/15 [\#19](https://github.com/zooniverse/Orchids/issues/19)
 
 **Merged pull requests:**
+
+- Add a custom 'no subjects' message for field photos [\#26](https://github.com/zooniverse/Orchids/pull/26) ([eatyourgreens](https://github.com/eatyourgreens))
+
+- Don't ask for comments on insects. [\#25](https://github.com/zooniverse/Orchids/pull/25) ([eatyourgreens](https://github.com/eatyourgreens))
+
+- Don't ask for comments on insects. [\#24](https://github.com/zooniverse/Orchids/pull/24) ([eatyourgreens](https://github.com/eatyourgreens))
+
+- New, less scary insect identification [\#22](https://github.com/zooniverse/Orchids/pull/22) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Hack to add hidden labels to the zoo login form. [\#20](https://github.com/zooniverse/Orchids/pull/20) ([eatyourgreens](https://github.com/eatyourgreens))
 

@@ -5,25 +5,25 @@ module.exports = [{
                  '''
     
     figures: [{
-      label: ''
+      label: '<a href="resources/OrchidObservers_IDGuide_FINAL.pdf">Download the idenitification guide (16.5MB PDF)</a>'
       image: "examples/species.jpg"
       alt: "Screenshot of the species identification tool."
     }]
   },{
     label: "Flowering stage"
     content: '''
-                  Select ‘flowering stage’, click on the flower spike and label the flowering stage of the orchid in the photograph. There are 3 options:
+                  The top part of the plant, that has flowers, is called the flowering spike. Select ‘flowering stage’, click on the flowering spike and label the flowering stage of the orchid in the photograph. There are 3 options:
                  '''
     figures: [{
       label: '''
-                   <dl>
-                                    <dt>Mainly in bud</dt>
-                                    <dd>choose this if the spike is 50% or more in bud.</dd>
-                                    <dt>Mainly in flower</dt>
-                                    <dd>choose this if the spike is 50% or more in flower.</dd>
-                                    <dt>Flowering over/seed capsules</dt> 
-                                    <dd>choose this if you see seed capsules on the spike</dd>
-                                    </dl>
+                 <dl>
+                  <dt>Mainly in bud</dt>
+                  <dd>choose this if more than half of the flowering spike is in bud.</dd>
+                  <dt>Mainly in flower</dt>
+                  <dd>choose this if more than half of the individual flowers on the flowering spike are open.</dd>
+                  <dt>Flowering over/seed capsules</dt> 
+                  <dd>choose this if you see seed capsules on the spike</dd>
+                </dl>
                    '''
       
       image: "examples/field-flowering.jpg"
@@ -36,7 +36,7 @@ module.exports = [{
                  '''
     figures: [{
       label: '''
-                  Tag the insect by clicking on it – a text box window appears where you can add your insect species identification (if known). You can use the common or scientific name e.g. <cite>‘Buff-tailed bumblebee’</cite> or <cite>Bombus terrestris</cite>.
+                  Tag insects by clicking on them. Don't worry if you can't identify the insects, we just want to know if an insect is present on the plant.
                    '''
       
       image: "examples/insects.jpg"

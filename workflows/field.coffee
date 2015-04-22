@@ -4,11 +4,11 @@ FreeDraw = require '../drawing-tools/free-draw-tool'
 TextTask = require '../tasks/text'
 TextareaTask = require '../tasks/textarea'
 OrchidFilterTask = require '../tasks/filter'
-MagnifierPoint = require '../drawing-tools/magnifier-point'
+MagnifierPoint = require 'marking-surface/lib/tools/magnifier-point'
 
 module.exports =
   key: 'field'
-  subjectGroup: 'field'
+  subjectGroup: 'TODO'
   label: 'Identify'
   firstTask: 'species'
   examples: require '../content/field-examples'
@@ -22,11 +22,10 @@ module.exports =
         require './filter-habitats'
       ]
       choices: require './orchid-types'
-      next: 'marking'
-    marking:
+      next: 'flowering'
+    flowering:
       type: 'drawing'
-      question: 'Click on each orchid and select the flowering stage. If there are any insects on the orchid(s), click on them and tell us what they are.'
-      confirmButtonLabel: 'Finish'
+      question: 'Click on each orchid and select the flowering stage.'
       choices: [{
           type: Pinpoint
           label: 'Label flowering stage'
@@ -46,17 +45,14 @@ module.exports =
               value: 'over'
             }]
           }]
-        },{
+        }]
+      next: 'insects'
+    insects:
+      type: 'drawing'
+      question: 'If there are any insects on the orchid(s), click on them to mark them.'
+      confirmButtonLabel: 'Finish'
+      choices: [{
         type: MagnifierPoint
         label: 'Select insects'
         value: 'insects'
-        details: [{
-          type: 'textarea'
-          key: 'insects'
-          choices:[{
-            value: ''
-            key: 'comments'
-            label: 'What is the name of this insect? Give as much detail as you can.'
-          }]
-        }]
       }]
