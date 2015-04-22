@@ -231,4 +231,7 @@ module.exports =
           traits: 
             colour: ["multi"]
             habitat: ["grassland"]
+        },{
+          label: 'None of the above'
+          value: 'None'
         }]
