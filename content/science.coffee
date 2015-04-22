@@ -12,6 +12,6 @@ module.exports = '''
                  <p><a href="http://www.nhm.ac.uk/research-curation/research/research-initiatives/origins-evolution/team/index.html">NHM: Origins and evolution initiative team</a></p>
 
                  <p><a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1365-2745.2010.01727.x/abstract">Validation of biological collections as a source of phenological data for use in climate change studies: a case study with the orchid <cite>Ophrys sphegodes</cite></a></p>
-                 <p><a href="http://www.bsbi.org.uk">Botanical Society of Britain and Irelan</a></p>
+                 <p><a href="http://www.bsbi.org.uk">Botanical Society of Britain and Ireland</a></p>
                  <p><a href="https://www.brc.ac.uk/recording-schemes">Biological Records Centre: recording schemes</a></p>
                  '''

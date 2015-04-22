@@ -18,7 +18,7 @@ module.exports =
   tasks:
     barcode:
       type: 'drawing'
-      question: 'Please select the barcode that matches the specimen number above. Then draw a rectangle around the handwritten label that the barcode relates to.'
+      question: 'Please select the barcode that matches the barcode number above. Then draw a rectangle around the handwritten label that the barcode relates to.'
       choices: [{
         type: SingleMagnifierPoint
         label: 'Select barcode'
