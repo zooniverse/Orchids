@@ -16,7 +16,7 @@ module.exports =
   tasks: 
     species:
       type: OrchidFilterTask.type
-      question: 'Looks like…'
+      question: 'Can you identify the orchid by comparing with plants from the following grid?'
       filters: [
       ]
       choices: require './orchid-types'
