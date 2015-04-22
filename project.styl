@@ -128,6 +128,12 @@
           display: inline-block
           width: 44px
           
+          &:last-of-type
+            display: block
+            width: auto
+            max-width: 8em
+            text-align: center
+          
           .readymade-choice-clickable
             padding: 2px
           
@@ -138,18 +144,17 @@
               max-width: 40px
               max-height: 40px
           
-          .readymade-choice-label
-            width: 0
-            overflow: hidden
-            font-size: .6em
-            min-height: 35px
-            margin: 2px
+            &+ .readymade-choice-label
+              width: 0
+              overflow: hidden
+              font-size: .6em
+              min-height: 35px
+              margin: 2px
           
           input:checked + .readymade-choice-clickable
-            background: #eee
-            font-weight: bold
-            
-            .readymade-choice-label
+            .readymade-choice-image + .readymade-choice-label
+              background: #eee
+              font-weight: bold
               width: auto
               overflow: visible
               background: #333
