@@ -1,11 +1,11 @@
 module.exports = [{
     label: 'Species'
     content: '''
-                 Identify the species by selecting from the photographs of the 29 species in the study. You can refine your selection by selecting flower colour and/or habitat from the drop down list
+                 The thumbnails show the 29 species included in this survey. The colour and habitat filter tools can help you to narrow your search but your selections will not be recorded. We only record your final choice of species name. For more help identifying the orchids in this survey please see our <a href="resources/OrchidObservers_IDGuide_FINAL.pdf">Identification Guide (16.5MB PDF)</a>.
                  '''
     
     figures: [{
-      label: '<a href="resources/OrchidObservers_IDGuide_FINAL.pdf">Download the idenitification guide (16.5MB PDF)</a>'
+      label: 'Zoom in on the main image to see the flowers in close-up; flower shape and colour pattern are key identification features. Select the orchid that most closely matches the main image.'
       image: "examples/species.jpg"
       alt: "Screenshot of the species identification tool."
     }]
