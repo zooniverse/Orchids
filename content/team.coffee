@@ -50,7 +50,7 @@ module.exports =
       description: '''
                          Mike is a nature fanatic with a specific interest in terrestrial orchids and global biogeography. He is now two months into a one year traineeship being run at the Angela Marmont Centre for UK Biodiversity at the Natural History Museum as part of the Heritage Lottery Fund's Skills for the Future programme. He is learning how to curate and tackle some of the UK’s more cryptic wildlife groups.
                          '''
-    }{
+    },{
       name: 'Lucy Robinson'
       location: 'Natural History Museum, London'
       description: '''
