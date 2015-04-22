@@ -27,28 +27,34 @@ module.exports =
       name: 'Kath Castillo'
       location: 'Natural History Museum, London'
       description: '''
-                         TODO
+                         Kath is a biologist and has worked at the Natural History Museum for over ten years on a wide range of projects, including developing a UK tree ID app and researching plant molecular phylogenetics. She has carried out botanical fieldwork around the world including searching for tropical orchids in Central America. She is passionate about biodiversity and all things biological everywhere!
                          '''
       
     },{
       name: 'Mark Spencer'
       location: 'Natural History Museum, London'
       description: '''
-                         TODO
+                         Mark Spencer has been fascinated by plants since early childhood and is now lucky enough to be able to study them as part of his job! His work at the museum covers invasive species, climate change, forensic botany and looking after 610,000 plant specimens in a museum herbarium.
                          '''
       
     },{
       name: 'John Tweddle'
       location: 'Natural History Museum, London'
       description: '''
-                         I am Head of the Museum’s Angela Marmont Centre for UK Biodiversity, a collaborative centre that aims to promote the appreciation and study of UK natural history and to inspire and support naturalists of all backgrounds and abilities. In my free time I am a volunteer wildlife recorder and citizen science enthusiast.
+                         John is Head of the Museum’s Angela Marmont Centre for UK Biodiversity, a collaborative centre that aims to promote the appreciation and study of UK natural history and to inspire and support naturalists of all backgrounds and abilities. In his free time he volunteers wildlife recorder and citizen science enthusiast.
                          '''
       
     },{
       name: 'Mike Waller'
-      location: 'NAtural History Museum, London'
+      location: 'Natural History Museum, London'
       description: '''
-                         A nature fanatic with a specific interest in terrestrial orchids and global biogeography. I’m now two months into a one year traineeship being run at the Angela Marmont Centre for UK Biodiversity at the Natural History Museum learning how to curate and tackle some of the UK’s more cryptic wildlife groups.
+                         Mike is a nature fanatic with a specific interest in terrestrial orchids and global biogeography. He is now two months into a one year traineeship being run at the Angela Marmont Centre for UK Biodiversity at the Natural History Museum as part of the Heritage Lottery Fund's Skills for the Future programme. He is learning how to curate and tackle some of the UK’s more cryptic wildlife groups.
+                         '''
+    }{
+      name: 'Lucy Robinson'
+      location: 'Natural History Museum, London'
+      description: '''
+                         Lucy manages and coordinates the Natural History Museum's citizen science programme — a collection of research projects where members of the public can collaborate with Museum scientists and make valuable contributions to scientific research. Lucy has worked at the museum for 8 years and in that time has worked on a wide variety of projects, including studying earthworms, lichens, pond life, urban invertebrates, microorganisms and now orchids!
                          '''
     }]
 
