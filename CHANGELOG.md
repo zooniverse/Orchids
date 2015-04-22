@@ -16,6 +16,8 @@
 
 **Merged pull requests:**
 
+- Identification [\#27](https://github.com/zooniverse/Orchids/pull/27) ([eatyourgreens](https://github.com/eatyourgreens))
+
 - Add a custom 'no subjects' message for field photos [\#26](https://github.com/zooniverse/Orchids/pull/26) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Don't ask for comments on insects. [\#25](https://github.com/zooniverse/Orchids/pull/25) ([eatyourgreens](https://github.com/eatyourgreens))
