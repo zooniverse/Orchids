@@ -113,13 +113,14 @@ for page in currentProject.classifyPages
         page.decisionTree.tasks.species.clearFilters()
         page.decisionTree.tasks.species.confirmButton.disabled = true
 
+# disable the species confirm until a value is chosen.
 field_page.el.on field_page.decisionTree.CHANGE, ({originalEvent: {detail}}) ->
   {key, value} = detail
   
   if key is 'species'
     field_page.decisionTree.tasks.species.confirmButton.disabled = false if value
 
-    
+# pick a random photo if more than one is present on a field subject
 field_page.on field_page.CREATE_CLASSIFICATION, () ->
   subject = field_page.classification.subject
   return unless Array.isArray subject.location.standard
@@ -129,7 +130,8 @@ field_page.on field_page.CREATE_CLASSIFICATION, () ->
   field_page.classification.set 'image_src', subject.location.standard[randomIndex]
     
   subject.location.standard = subject.location.standard[randomIndex]
-    
+
+# switch between batch 1 and batch 2 for transcription. Always start on batch 1.
 groups = require './workflows/groups'
 # start with 10 subjects from batch 1
 herbarium_page.Subject.queueMax = 10
@@ -141,6 +143,7 @@ herbarium_page.Subject.on 'fetch', (e, subjects) ->
   else 
     herbarium_page.Subject.group = groups.batch1
 
+# Alert before you do your first full transcription record
 herbarium_page.on herbarium_page.LOAD_SUBJECT, (e, subject) ->
   is_transcriber = User.current?.preferences?[currentProject.id]?.transcriber || herbarium_page.transcriber
   transcribeAlert() if subject.group_id == groups.batch2 unless is_transcriber
@@ -164,10 +167,11 @@ transcribeAlert = ->
   setTimeout ->
     prompt.el[0].querySelector('button').focus()
       
-
+# add a box to show herbarium barcode number etc.
 subject_metadata = new SubjectMetadata
 herbarium_page.el.find('.decision-tree').prepend subject_metadata.el
 
+# add a viewer to show the orchid type examples for field photos
 orchid_type = new OrchidType
 field_page.el.find('.decision-tree').before orchid_type.el
     
