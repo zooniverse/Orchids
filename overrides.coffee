@@ -170,6 +170,14 @@ herbarium_page.el.find('.decision-tree').prepend subject_metadata.el
 
 orchid_type = new OrchidType
 field_page.el.find('.decision-tree').before orchid_type.el
+
+# Custome 'no more subjects' message for uploaded photos
+no_field_message = '''
+                    <p class="caption"><img src="rosette.jpg" alt="Common spotted-orchid – rosette"><br>Common spotted-orchid rosette, Natural History Museum grounds, 16 April 2015</p>
+                   <p>We're waiting for the first photos from the 2015 UK orchid flowering season to appear!</p>
+                   <p>Meanwhile, you can help us by <a href="#/upload">uploading your photos</a> or <a href="#/transcribe">transcribing our herbarium sheets</a>.</p>
+                   '''
+field_page.noMoreSubjectsMessage.html no_field_message
     
 # herbarium_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task, index}})->
   

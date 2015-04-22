@@ -8,7 +8,7 @@ MagnifierPoint = require '../drawing-tools/magnifier-point'
 
 module.exports =
   key: 'field'
-  subjectGroup: 'field'
+  subjectGroup: 'TODO'
   label: 'Identify'
   firstTask: 'species'
   examples: require '../content/field-examples'
