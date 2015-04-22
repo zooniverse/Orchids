@@ -49,19 +49,11 @@ module.exports =
       next: 'insects'
     insects:
       type: 'drawing'
-      question: 'If there are any insects on the orchid(s), click on them and name them if you can.'
+      question: 'If there are any insects on the orchid(s), click on them to mark them.'
       confirmButtonLabel: 'Finish'
       choices: [{
         type: MagnifierPoint
         label: 'Select insects'
         value: 'insects'
-        details: [{
-          type: 'textarea'
-          key: 'insects'
-          choices:[{
-            value: ''
-            key: 'comments'
-            label: 'Name (if known).'
-          }]
         }]
       }]
