@@ -1,6 +1,6 @@
 BaseMagnifierPoint = require 'marking-surface/lib/tools/magnifier-point'
 
-class MagnifierPoint extends BaseMagnifierPoint
+class DetailsMagnifierPoint extends BaseMagnifierPoint
   @Controls: require './fieldset-controls'
   
   render: ->
@@ -12,4 +12,4 @@ class MagnifierPoint extends BaseMagnifierPoint
       x: @mark.x + offset
       y: @mark.y
     
-module.exports = MagnifierPoint
+module.exports = DetailsMagnifierPoint
