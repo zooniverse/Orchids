@@ -36,7 +36,7 @@ module.exports = [{
                  '''
     figures: [{
       label: '''
-                  Tag insects by clicking on them – a text box window appears where you can add a name (if known). Don't worry if you can't identify the insects, we just want to know if an insect is present on the plant.
+                  Tag insects by clicking on them. Don't worry if you can't identify the insects, we just want to know if an insect is present on the plant.
                    '''
       
       image: "examples/insects.jpg"
