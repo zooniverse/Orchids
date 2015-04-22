@@ -18,6 +18,8 @@ module.exports =
       type: OrchidFilterTask.type
       question: 'Can you identify the orchid by comparing with plants from the following grid?'
       filters: [
+        require './filter-colours'
+        require './filter-habitats'
       ]
       choices: require './orchid-types'
       next: 'marking'
