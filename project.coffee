@@ -30,7 +30,8 @@ module.exports =
   }]
   
   externalLinks:
-    Feedback: 'https://docs.google.com/forms/d/1R1g1T8CQY3eAQaOWZMf3xTm7H7EhIfg10jVwdSSctpA/viewform'
+    Talk: '//talk.orchidobservers.org'
+    Blog: '//blog.orchidobservers.org'
   
   workflows: [
     require './workflows/herbarium'
