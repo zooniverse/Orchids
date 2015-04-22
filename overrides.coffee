@@ -76,6 +76,10 @@ for page in currentProject.classifyPages
       {label} = decisionTree.currentTask.getChoice() ? ''
       legend = tool.controls?.el.querySelector 'legend'
       legend.textContent = label if legend?
+      
+      if page.decisionTree.currentTask.key is 'barcode'
+        task = page.decisionTree.currentTask
+        task.check task.choices[1]
     
     page.on page.LOAD_SUBJECT, (e, subject)->
       ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
