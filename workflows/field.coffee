@@ -8,7 +8,7 @@ MagnifierPoint = require 'marking-surface/lib/tools/magnifier-point'
 
 module.exports =
   key: 'field'
-  subjectGroup: 'field'
+  subjectGroup: 'TODO'
   label: 'Identify'
   firstTask: 'species'
   examples: require '../content/field-examples'
