@@ -34,7 +34,7 @@ module.exports =
       name: 'Mark Spencer'
       location: 'Natural History Museum, London'
       description: '''
-                         Mark Spencer has been fascinated by plants since early childhood and is now lucky enough to be able to study them as part of his job! His work at the museum covers invasive species, climate change, forensic botany and looking after 610,000 plant specimens in a museum herbarium.
+                         Mark has been fascinated by plants since early childhood and is now lucky enough to be able to study them as part of his job! His work at the museum covers invasive species, climate change, forensic botany and looking after 610,000 plant specimens in a museum herbarium.
                          '''
       
     },{
