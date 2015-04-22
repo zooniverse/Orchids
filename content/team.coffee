@@ -41,7 +41,7 @@ module.exports =
       name: 'John Tweddle'
       location: 'Natural History Museum, London'
       description: '''
-                         John is Head of the Museum’s Angela Marmont Centre for UK Biodiversity, a collaborative centre that aims to promote the appreciation and study of UK natural history and to inspire and support naturalists of all backgrounds and abilities. In his free time he volunteers as a wildlife recorder and citizen science enthusiast.
+                         John has worked at the Museum since 2003 and is currently Head of the Museum’s Centre for UK Biodiversity. An ecologist and citizen science specialist, John is fascinated by all things ‘natural history’, with a particular interest in the long-term history of the UK’s wildlife. John spends much of his free time identifying and recording the plants and animals that live in his local area.
                          '''
       
     },{
