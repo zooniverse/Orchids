@@ -1,6 +1,6 @@
 module.exports = '''
                 <h2>Guides to download</h2>
-                <p><a href="resources/OrchidObservers_InstructionSheet.pdf">Instructions for observers (129KB PDF)</a></p>
+                <p><a href="resources/OrchidObservers_InstructionSheet.pdf">Instructions for observers (145KB PDF)</a></p>
                 <p><a href="resources/OrchidObservers_IDGuide_FINAL.pdf">UK Orchid Identification Guide (16MB PDF)</a></p>
                  <h2>Why do I need to tell you my name and sign-in to Zooniverse?</h2>
                  <p>Providing that the orchid can by positively identified (or ‘verified’), then your photo and the additional information that you upload will form a ‘biological record’. A biological record must contain four essential pieces of information: what was found, where it was found, when it was found and who found it. This is why we ask you for your name; it ensures that your orchid sighting can contribute to our shared understanding of the UK’s orchids for decades to come.</p>
