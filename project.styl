@@ -114,10 +114,11 @@
     background: rgba(0, 0, 0, 0.5)
     
     .decision-tree-task
-    
+        
       .readymade-filter-menu
         background: white
         max-width: 10em
+        padding: 0
     
       &[data-task-type=accessible-filter]
       
@@ -141,6 +142,7 @@
           
           .readymade-choice-clickable
             padding: 2px
+            display: inline-block
           
           .readymade-choice-image 
             width: 0
@@ -150,6 +152,8 @@
               max-height: 40px
           
             &+ .readymade-choice-label
+              position: absolute
+              top: 0
               width: 0
               overflow: hidden
               font-size: .6em
