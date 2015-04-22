@@ -60,11 +60,11 @@ module.exports = [{
       label: '''
                   <dl>
                     <dt>Mainly in bud</dt>
-                    <dd>choose this if the spike has 50% or more flower buds than open flowers.</dd>
+                    <dd>choose this if more than half of the flowering spike is in bud.</dd>
                     <dt>Mainly in flower</dt>
-                    <dd>choose this if the spike has 50% or more open flowers.</dd>
+                    <dd>choose this if more than half of the individual flowers on the flowering spike are open.</dd>
                     <dt>Flowering over/seed capsules</dt> 
-                    <dd>choose this if you see any seed capsules on the spike [illustration of orchid seed capsule?]</dd>
+                    <dd>choose this if you see seed capsules on the spike</dd>
                     <dt>I don’t know</dt>
                     <dd>choose this if you cannot tell what the flowering stage is.</dd>
                   </dl>
