@@ -7,6 +7,8 @@ class Rectangle extends RectangleTool
   
   constructor: ->
     super
+    @mark.width = 100
+    @mark.height = 50
     Rectangle.count++
   
   destroy: =>
