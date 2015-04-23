@@ -6,9 +6,11 @@ TextareaTask = require '../tasks/textarea'
 OrchidFilterTask = require '../tasks/filter'
 MagnifierPoint = require 'marking-surface/lib/tools/magnifier-point'
 
+groups = require './groups'
+
 module.exports =
   key: 'field'
-  subjectGroup: 'TODO'
+  subjectGroup: groups.field
   label: 'Identify'
   firstTask: 'species'
   examples: require '../content/field-examples'
