@@ -80,6 +80,12 @@ for page in currentProject.classifyPages
       if page.decisionTree.currentTask.key is 'barcode'
         task = page.decisionTree.currentTask
         task.check task.choices[1]
+        
+    ms.on 'marking-surface:remove-tool', (tool) ->
+      if page.decisionTree.currentTask.key is 'barcode'
+        task = page.decisionTree.currentTask
+        choice = (choice for choice in task.choices when choice.value == tool.mark.value)[0]
+        task.check choice
     
     page.on page.LOAD_SUBJECT, (e, subject)->
       ms.rescale 0, 0, subjectViewer.maxWidth, subjectViewer.maxHeight
