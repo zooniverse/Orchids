@@ -191,6 +191,15 @@ no_field_message = '''
                    <p>Meanwhile, you can help us by <a href="#/upload">uploading your photos</a> or <a href="#/transcribe">transcribing our herbarium sheets</a>.</p>
                    '''
 field_page.noMoreSubjectsMessage.html no_field_message
+
+#  hack: don't show the tutorial unless there's a classification subject
+# also, don't call tutorial.close() because that sets the tutorial_done flag.
+field_page.on field_page.START_TUTORIAL, (args...) ->
+  setTimeout ->
+    return if field_page.subjectViewer.subject
+    field_page.tutorial.el.setAttribute 'aria-hidden', true
+    field_page.tutorial.current_focus?.focus()
+  , 250
     
 # herbarium_page.el.on decisionTree.LOAD_TASK, ({originalEvent: detail: {task, index}})->
   
