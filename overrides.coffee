@@ -8,6 +8,7 @@ window.zooniverse.views.profile = require './templates/profile'
 Dialog = require 'zooniverse/controllers/dialog'
 User = require 'zooniverse/models/user'
 SubjectMetadata = require './subject-metadata'
+ViceCounty = require './vice-county'
 OrchidType = require './orchid-type'
 SubjectViewer = require 'zooniverse-readymade/lib/subject-viewer'
 ClassifyPage = require 'zooniverse-readymade/lib/classify-page'
@@ -189,6 +190,10 @@ herbarium_page.el.find('.decision-tree').prepend subject_metadata.el
 # add a viewer to show the orchid type examples for field photos
 orchid_type = new OrchidType
 field_page.el.find('.decision-tree').before orchid_type.el
+
+# display the vice county and location for field photos
+vice_county = new ViceCounty
+field_page.el.find('.decision-tree').prepend vice_county.el
 
 # Custome 'no more subjects' message for uploaded photos
 no_field_message = '''
