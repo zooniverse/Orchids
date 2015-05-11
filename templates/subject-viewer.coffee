@@ -3,31 +3,6 @@ translate = require 'zooniverse/lib/translate'
 module.exports = -> """
   <div class="drawing-controls">
     
-    <label class="readymade-has-clickable" title="Help">
-      <input type="checkbox" name="help" />
-      <span class="readymade-clickable small">
-        <i class="fa fa-question readymade-clickable-not-checked"></i>
-        <i class="fa fa-question readymade-clickable-checked" style="color: gold;"></i>
-        <span>Help</span>
-      </span>
-    </label>
-    
-    <label class="readymade-has-clickable" title="Favourite">
-      <input type="checkbox" name="favorite" />
-      <span class="readymade-clickable small">
-        #{translate 'readymade.favoriteIcon'}
-        #{translate 'readymade.favoriteIconChecked'}
-        <span>#{translate 'readymade.favorite'}</span>
-      </span>
-    </label>
-
-    <button name="restart-tutorial" title="Restart tutorial">
-      <span class="readymade-clickable small">
-        #{translate 'readymade.tutorialIcon'}
-        <span>#{translate 'readymade.restartTutorial'}</span>
-      </span>
-    </button>
-    
   </div>
 
   <div class="readymade-marking-surface-container">
@@ -45,6 +20,32 @@ module.exports = -> """
           <span>Zoom out</span>
         </span>
       </button>
+      
+      <label class="readymade-has-clickable" title="Help">
+        <input type="checkbox" name="help" />
+        <span class="readymade-clickable small">
+          <i class="fa fa-question readymade-clickable-not-checked"></i>
+          <i class="fa fa-question readymade-clickable-checked" style="color: gold;"></i>
+          <span>Help</span>
+        </span>
+      </label>
+    
+      <label class="readymade-has-clickable" title="Favourite">
+        <input type="checkbox" name="favorite" />
+        <span class="readymade-clickable small">
+          #{translate 'readymade.favoriteIcon'}
+          #{translate 'readymade.favoriteIconChecked'}
+          <span>#{translate 'readymade.favorite'}</span>
+        </span>
+      </label>
+
+      <button name="restart-tutorial" title="Restart tutorial">
+        <span class="readymade-clickable small">
+          #{translate 'readymade.tutorialIcon'}
+          <span>#{translate 'readymade.restartTutorial'}</span>
+        </span>
+      </button>
+      
     </div>
   </div>
 
