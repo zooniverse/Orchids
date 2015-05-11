@@ -2,6 +2,7 @@ BaseMagnifierPoint = require 'marking-surface/lib/tools/magnifier-point'
 
 class DetailsMagnifierPoint extends BaseMagnifierPoint
   @Controls: require './fieldset-controls'
+  selectedRadius: 60
   
   render: ->
     super
