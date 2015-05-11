@@ -6,6 +6,10 @@
 
 **Implemented enhancements:**
 
+- Make the help button more prominent [\#35](https://github.com/zooniverse/Orchids/issues/35)
+
+- Increase size of the magnifier tool [\#31](https://github.com/zooniverse/Orchids/issues/31)
+
 - Updated orchid types list [\#8](https://github.com/zooniverse/Orchids/issues/8)
 
 **Closed issues:**
@@ -19,6 +23,8 @@
 - Transcribing labels not working as of 10:16 20/4/15 [\#19](https://github.com/zooniverse/Orchids/issues/19)
 
 **Merged pull requests:**
+
+- UI updates based on user feedback [\#37](https://github.com/zooniverse/Orchids/pull/37) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Show classification counts on the user profile [\#33](https://github.com/zooniverse/Orchids/pull/33) ([eatyourgreens](https://github.com/eatyourgreens))
 
