@@ -127,6 +127,16 @@ for page in currentProject.classifyPages
       if page.workflow is 'field'
         page.decisionTree.tasks.species.clearFilters()
         page.decisionTree.tasks.species.confirmButton.disabled = true
+    
+    page.on page.FINISH_SUBJECT,  (e, page) ->
+      group_id = page.subjectViewer.subject.group_id
+      if User.current?.project.groups[group_id]
+        User.current?.project.groups[group_id].classification_count++
+      else
+        User.current?.project.groups[group_id] = {title: '', classification_count: 1}
+      profile_stats.el.html ''
+      profile_stats.setGroupMessages()
+      profile_stats.renderTemplate()
 
 # disable the species confirm until a value is chosen.
 field_page.el.on field_page.decisionTree.CHANGE, ({originalEvent: {detail}}) ->
