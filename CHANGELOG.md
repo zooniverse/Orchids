@@ -10,6 +10,8 @@
 
 **Closed issues:**
 
+- Attempting to select multiple barcodes breaks everything [\#29](https://github.com/zooniverse/Orchids/issues/29)
+
 - Tutorial is under the decision tree options [\#28](https://github.com/zooniverse/Orchids/issues/28)
 
 - Set up talk.orchidobservers.org [\#21](https://github.com/zooniverse/Orchids/issues/21)
@@ -17,6 +19,8 @@
 - Transcribing labels not working as of 10:16 20/4/15 [\#19](https://github.com/zooniverse/Orchids/issues/19)
 
 **Merged pull requests:**
+
+- Show classification counts on the user profile [\#33](https://github.com/zooniverse/Orchids/pull/33) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Display vice county for field photos [\#30](https://github.com/zooniverse/Orchids/pull/30) ([eatyourgreens](https://github.com/eatyourgreens))
 
