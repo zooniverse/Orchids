@@ -13,6 +13,7 @@ OrchidType = require './orchid-type'
 SubjectViewer = require 'zooniverse-readymade/lib/subject-viewer'
 ClassifyPage = require 'zooniverse-readymade/lib/classify-page'
 SiteHeader = require 'zooniverse-readymade/lib/site-header'
+ProfileStats = require './profile-stats'
 
 OrchidFilterTask = require './tasks/filter'
 DecisionTree = require 'zooniverse-decision-tree'
@@ -58,6 +59,9 @@ field_page = currentProject.classifyPages[1]
 herbarium_species = herbarium_page.decisionTree.el.querySelector('input[name=species]')
 
 currentProject.homePage.querySelector( '.readymade-footer' ).insertAdjacentHTML 'beforeEnd', '<a href="#/upload" class="readymade-call-to-action">Upload photos</a>'
+  
+profile_stats = new ProfileStats
+currentProject.profile.el.find('.profile-stats').append profile_stats.el
 
 for page in currentProject.classifyPages
   do (page) ->
