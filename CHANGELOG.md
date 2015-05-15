@@ -8,9 +8,17 @@
 
 - Make the help button more prominent [\#35](https://github.com/zooniverse/Orchids/issues/35)
 
+- Update the 'no more subjects' message [\#34](https://github.com/zooniverse/Orchids/issues/34)
+
+- Include some feedback on user profiles [\#32](https://github.com/zooniverse/Orchids/issues/32)
+
 - Increase size of the magnifier tool [\#31](https://github.com/zooniverse/Orchids/issues/31)
 
 - Updated orchid types list [\#8](https://github.com/zooniverse/Orchids/issues/8)
+
+**Fixed bugs:**
+
+- Identify - field image upload and assignment bug [\#38](https://github.com/zooniverse/Orchids/issues/38)
 
 **Closed issues:**
 
