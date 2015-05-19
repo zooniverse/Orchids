@@ -4,6 +4,7 @@ require './readymade/overrides.coffee'
 window.zooniverse ?= {}
 window.zooniverse.views ?= {}
 window.zooniverse.views.profile = require './templates/profile'
+window.zooniverse.views.profileItem = require './templates/profile-item'
 
 Dialog = require 'zooniverse/controllers/dialog'
 User = require 'zooniverse/models/user'
