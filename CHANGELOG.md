@@ -18,6 +18,8 @@
 
 **Fixed bugs:**
 
+- Broken images on the user profile [\#40](https://github.com/zooniverse/Orchids/issues/40)
+
 - Identify - field image upload and assignment bug [\#38](https://github.com/zooniverse/Orchids/issues/38)
 
 **Closed issues:**
@@ -31,6 +33,8 @@
 - Transcribing labels not working as of 10:16 20/4/15 [\#19](https://github.com/zooniverse/Orchids/issues/19)
 
 **Merged pull requests:**
+
+- Fix the favourites/recents template [\#39](https://github.com/zooniverse/Orchids/pull/39) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - UI updates based on user feedback [\#37](https://github.com/zooniverse/Orchids/pull/37) ([eatyourgreens](https://github.com/eatyourgreens))
 
