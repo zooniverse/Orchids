@@ -91,7 +91,7 @@ else
   saved = []
 end
 puts saved
-params = { "survey_id" => 294, "smpattrs" => '36,37,35,584', "occattrs" => '', 'date_from' => '2015-04-02' }
+params = { "survey_id" => 294, "smpattrs" => '36,37,35,584', "occattrs" => '' }
 ws = IndiciaWS.new()
 response = ws.getReport( { :report => 'specific_surveys/zooniverse/orchid_observers/filterable_explore_list', :params => params } )
 subjects = []
