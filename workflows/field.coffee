@@ -18,7 +18,7 @@ module.exports =
   tasks: 
     species:
       type: OrchidFilterTask.type
-      question: 'Can you identify the orchid by comparing with plants from the following grid?'
+      question: 'Can you identify the orchid by comparing with plants from the following grid?<br><a href="resources/OrchidObservers_IDGuide_FINAL.pdf">Identification Guide (16.5MB PDF)</a>'
       filters: [
         require './filter-colours'
         require './filter-habitats'
