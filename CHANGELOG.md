@@ -6,6 +6,8 @@
 
 **Implemented enhancements:**
 
+- Make the pdf guides more obvious [\#36](https://github.com/zooniverse/Orchids/issues/36)
+
 - Make the help button more prominent [\#35](https://github.com/zooniverse/Orchids/issues/35)
 
 - Update the 'no more subjects' message [\#34](https://github.com/zooniverse/Orchids/issues/34)
