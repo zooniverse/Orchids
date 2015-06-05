@@ -1,7 +1,7 @@
 module.exports = [{
     label: 'Species'
     content: '''
-                 The thumbnails show the 29 species included in this survey. The colour and habitat filter tools can help you to narrow your search but your selections will not be recorded. We only record your final choice of species name. For more help identifying the orchids in this survey please see our <a href="resources/OrchidObservers_IDGuide_FINAL.pdf">Identification Guide (16.5MB PDF)</a>.
+                 The thumbnails show the 29 species included in this survey. The colour and habitat filter tools can help you to narrow your search but your selections will not be recorded. We only record your final choice of species name. For more help identifying the orchids in this survey please see our <a href="resources/OrchidObservers_IDGuide_v2.pdf">Identification Guide (16MB PDF)</a>.
                  '''
     
     figures: [{
