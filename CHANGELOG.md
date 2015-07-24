@@ -26,15 +26,21 @@
 
 **Closed issues:**
 
+- Lower the retirement limits for transcription tasks [\#41](https://github.com/zooniverse/Orchids/issues/41)
+
 - Attempting to select multiple barcodes breaks everything [\#29](https://github.com/zooniverse/Orchids/issues/29)
 
 - Tutorial is under the decision tree options [\#28](https://github.com/zooniverse/Orchids/issues/28)
+
+- Boards on Talk [\#23](https://github.com/zooniverse/Orchids/issues/23)
 
 - Set up talk.orchidobservers.org [\#21](https://github.com/zooniverse/Orchids/issues/21)
 
 - Transcribing labels not working as of 10:16 20/4/15 [\#19](https://github.com/zooniverse/Orchids/issues/19)
 
 **Merged pull requests:**
+
+- Instructions for updating the field subjects in Ouroboros [\#42](https://github.com/zooniverse/Orchids/pull/42) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Fix the favourites/recents template [\#39](https://github.com/zooniverse/Orchids/pull/39) ([eatyourgreens](https://github.com/eatyourgreens))
 
