@@ -15,17 +15,29 @@ module.exports =
                  '''
 
   pages: [{
-      'Upload': [{
-        'Upload photos': upload_form
+      key: 'upload'
+      title: 'Upload'
+      content: [{
+        key: 'upload-photos'
+        title: 'Upload photos'
+        content: upload_form
       },{
-        'Resources': require './content/resources'
+        key: 'resources'
+        title: 'Resources'
+        content: require './content/resources'
       }]
     },{
-    'Science': [
+    key: 'science'
+    title: 'Science'
+    content: [
       {
-        'The Science': require './content/science'
+        key: 'the-science'
+        title: 'The Science'
+        content: require './content/science'
       },{
-        'The Team': team_page team
+        key: 'the-team'
+        title: 'The Team'
+        content: team_page team
       }]
   }]
   
