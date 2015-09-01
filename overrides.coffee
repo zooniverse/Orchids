@@ -165,13 +165,15 @@ field_page.on field_page.CREATE_CLASSIFICATION, () ->
 # switch between batch 1 and batch 2 for transcription. Always start on batch 1.
 groups = require './workflows/groups'
 # start with 10 subjects from batch 1
-herbarium_page.Subject.queueMax = 10
+herbarium_page.Subject.queueMax = 3
 herbarium_page.Subject.group = groups.batch1
 # the alternate between batch 1 and batch 2
 herbarium_page.Subject.on 'fetch', (e, subjects) ->
   if herbarium_page.Subject.group == groups.batch1 
+    herbarium_page.Subject.queueMax = 11
     herbarium_page.Subject.group = groups.batch2 
   else 
+    herbarium_page.Subject.queueMax = 3
     herbarium_page.Subject.group = groups.batch1
 
 # Alert before you do your first full transcription record
