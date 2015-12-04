@@ -3,8 +3,16 @@ upload_form = new UploadForm
 team_page = require './templates/team-page'
 team = require './content/team'
 
+[apiHost, apiProxyPath] = if window.location.hostname is 'www.orchidobservers.org'
+  ['http://www.orchidobservers.org', '/_ouroboros_api/proxy']
+else
+  [null, null]
+
 module.exports =
   id: 'orchid'
+  apiHost: apiHost
+  apiProxyPath: apiProxyPath
+
   background: 'background.jpg'
   subjectGroup: false
 
