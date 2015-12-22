@@ -40,6 +40,8 @@
 
 **Merged pull requests:**
 
+- replace upload with holding page [\#44](https://github.com/zooniverse/Orchids/pull/44) ([eatyourgreens](https://github.com/eatyourgreens))
+
 - Bias herbarium task towards batch 2 subjects [\#43](https://github.com/zooniverse/Orchids/pull/43) ([eatyourgreens](https://github.com/eatyourgreens))
 
 - Instructions for updating the field subjects in Ouroboros [\#42](https://github.com/zooniverse/Orchids/pull/42) ([eatyourgreens](https://github.com/eatyourgreens))
