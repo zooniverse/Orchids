@@ -23,7 +23,13 @@ class UploadForm extends Controller
       <p><a href="resources/OrchidObservers_IDGuide_v2.pdf">UK Orchid Identification Guide (16MB PDF)</a></p>
       <p>Please log in to upload photos.</p>
       """
-    template = if User.current then logged_in else logged_out
+    offline = """
+      <h2>Upoad photos</h2>
+      <p>A huge thank you to all our participants who photographed and submitted their images and records of wild orchids throughout 2015. We’ve now collected all the field data for our analysis but we’d love your help with finishing classifying species and flowering stage in the photographs on the <a href="#identify">identify</a> page! We’d also like help checking and transcribing the labels and flowering stage for our historical orchid collection on the <a href="#transcribe">transcribe</a> page. Thanks for your help!</p>
+                  """
+    
+    # template = if User.current then logged_in else logged_out
+    template = offline
       
   
   constructor: ->
