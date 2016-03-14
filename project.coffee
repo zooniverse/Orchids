@@ -4,7 +4,7 @@ team_page = require './templates/team-page'
 team = require './content/team'
 
 [apiHost, apiProxyPath] = if window.location.hostname is 'www.orchidobservers.org'
-  ['http://www.orchidobservers.org', '/_ouroboros_api/proxy']
+  ['https://www.orchidobservers.org', '/_ouroboros_api/proxy']
 else
   [null, null]
 
@@ -48,11 +48,11 @@ module.exports =
         content: team_page team
       }]
   }]
-  
+
   externalLinks:
     Talk: '//talk.orchidobservers.org'
     Blog: '//blog.orchidobservers.org'
-  
+
   workflows: [
     require './workflows/herbarium'
     require './workflows/field'
