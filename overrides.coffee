@@ -220,8 +220,8 @@ waiting_message = '''
                    '''
 no_field_message = '''
                     <p class="caption"><img src="rosette.jpg" alt="Common spotted-orchid – rosette"><br>Common spotted-orchid rosette, Natural History Museum grounds, 16 April 2015</p>
-                   <p>Looks like you've identified all of the available photos. New photos will be uploaded in a few days, while the 2015 flowering season continues.</p>
-                   <p>Meanwhile, you can help us by <a href="#/upload">uploading your photos</a> or <a href="#/transcribe">transcribing our herbarium sheets</a>.</p>
+                   <p>Looks like you've identified all of the available photos.</p>
+                   <p>Meanwhile, you can help us by <a href="#/transcribe">transcribing our herbarium sheets</a>.</p>
                    '''
 field_page.noMoreSubjectsMessage.html no_field_message
 
